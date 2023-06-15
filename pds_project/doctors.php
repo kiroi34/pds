@@ -74,7 +74,7 @@
         // Jadwal
         array_push($jadwal, $document->jadwal);
     }
-
+    
     $q=0;
     // Echo spesialis dan dokternya
     for ($i = 0; $i < count($spesialis); $i++) {
@@ -129,7 +129,7 @@
                     echo "</div>";
                     echo "<div class='modal-footer'>";
                     echo "<button type='button' class='btn btn-danger' data-bs-dismiss='modal'>Cancel</button>";
-                    echo "<a class='btn btn-primary' href='process_book.php?dokter=".$nama_dokter[$temp[$k]]."&spesialis=".$nama_spesialis."&time=".$tempp[$l]."'>Confirm</a>";
+                    echo "<button type='button' class='btn btn-primary'>Confirm</button>";
                     echo "</div>";
                     echo "</div>";
                     echo "</div>";

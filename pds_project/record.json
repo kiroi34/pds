@@ -1,0 +1,141 @@
+[{
+        "id_record": "r0",
+        "id_dokter": "d7",
+        "id_pasien": "p2",
+        "riwayat_obat": [
+            "Panadol",
+            "Loratadine",
+            "Befamethasone"
+        ],
+        "gejala_pasien": "Sesak nafas,Ruam / gatal-gatal,Muntah-muntah",
+        "diagnosa_pasien": "Campak",
+        "tindakan_dilakukan": "Diresepkan obat",
+        "tanggal_rekam_medis": "18-09-2016"
+    },
+    {
+        "id_record": "r1",
+        "id_dokter": "d5",
+        "id_pasien": "p9",
+        "riwayat_obat": [
+            "Neuralgin",
+            "Ponstan",
+            "Incidal"
+        ],
+        "gejala_pasien": "Migrain,Ruam / gatal-gatal,Fotofobia",
+        "diagnosa_pasien": "Infeksi",
+        "tindakan_dilakukan": "Penyuntikan obat/vitamin",
+        "tanggal_rekam_medis": "19-05-2020"
+    },
+    {
+        "id_record": "r2",
+        "id_dokter": "d10",
+        "id_pasien": "p9",
+        "riwayat_obat": [
+            "Neuralgin",
+            "Loratadine",
+            "Incidal"
+        ],
+        "gejala_pasien": "Sesak nafas,Inflamasi,Kelelahan",
+        "diagnosa_pasien": "Cacar air",
+        "tindakan_dilakukan": "Dirujuk ke rumah sakit",
+        "tanggal_rekam_medis": "06-04-2021"
+    },
+    {
+        "id_record": "r3",
+        "id_dokter": "d3",
+        "id_pasien": "p8",
+        "riwayat_obat": [
+            "Amlodipine",
+            "Lameson",
+            "Ambroxol"
+        ],
+        "gejala_pasien": "Demam,Ruam / gatal-gatal,Muntah-muntah",
+        "diagnosa_pasien": "Gigi berlubang",
+        "tindakan_dilakukan": "Penyuntikan obat/vitamin",
+        "tanggal_rekam_medis": "09-08-2020"
+    },
+    {
+        "id_record": "r4",
+        "id_dokter": "d1",
+        "id_pasien": "p9",
+        "riwayat_obat": [
+            "Panadol",
+            "Loratadine",
+            "Incidal"
+        ],
+        "gejala_pasien": "Demam,Diare,Kelelahan",
+        "diagnosa_pasien": "Cacar air",
+        "tindakan_dilakukan": "Diresepkan obat",
+        "tanggal_rekam_medis": "28-10-2012"
+    },
+    {
+        "id_record": "r5",
+        "id_dokter": "d4",
+        "id_pasien": "p5",
+        "riwayat_obat": [
+            "Lipitor",
+            "Loratadine",
+            "Befamethasone"
+        ],
+        "gejala_pasien": "Sesak nafas,Ruam / gatal-gatal,Fotofobia",
+        "diagnosa_pasien": "Gigi berlubang",
+        "tindakan_dilakukan": "Penyuntikan obat/vitamin",
+        "tanggal_rekam_medis": "09-05-2018"
+    },
+    {
+        "id_record": "r6",
+        "id_dokter": "d4",
+        "id_pasien": "p3",
+        "riwayat_obat": [
+            "Neuralgin",
+            "Voltadex",
+            "Ambroxol"
+        ],
+        "gejala_pasien": "Sesak nafas,Ruam / gatal-gatal,Mood swing",
+        "diagnosa_pasien": "Katarak",
+        "tindakan_dilakukan": "Dirujuk ke rumah sakit",
+        "tanggal_rekam_medis": "03-11-2011"
+    },
+    {
+        "id_record": "r7",
+        "id_dokter": "d1",
+        "id_pasien": "p10",
+        "riwayat_obat": [
+            "Amlodipine",
+            "Ponstan",
+            "Befamethasone"
+        ],
+        "gejala_pasien": "Migrain,Diare,Kelelahan",
+        "diagnosa_pasien": "Abses gigi",
+        "tindakan_dilakukan": "Penyuntikan obat/vitamin",
+        "tanggal_rekam_medis": "10-09-2016"
+    },
+    {
+        "id_record": "r8",
+        "id_dokter": "d1",
+        "id_pasien": "p6",
+        "riwayat_obat": [
+            "Neuralgin",
+            "Ponstan",
+            "Cenacort"
+        ],
+        "gejala_pasien": "Migrain,Inflamasi,Mood swing",
+        "diagnosa_pasien": "Cacar air",
+        "tindakan_dilakukan": "Penyuntikan obat/vitamin",
+        "tanggal_rekam_medis": "07-02-2010"
+    },
+    {
+        "id_record": "r9",
+        "id_dokter": "d4",
+        "id_pasien": "p8",
+        "riwayat_obat": [
+            "Erythromycin",
+            "Ponstan",
+            "Epexol"
+        ],
+        "gejala_pasien": "Demam,Inflamasi,Muntah-muntah",
+        "diagnosa_pasien": "Muntaber",
+        "tindakan_dilakukan": "Dirujuk ke rumah sakit",
+        "tanggal_rekam_medis": "16-01-2019"
+    }
+]

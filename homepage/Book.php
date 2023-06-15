@@ -11,9 +11,9 @@
       <title>Client</title>
       
       <!-- bootstrap css -->
-      <!-- <link rel="stylesheet" href="css/bootstrap.min.css"> -->
+      <link rel="stylesheet" href="css/bootstrap.min.css">
       <!-- style css -->
-      <!-- <link rel="stylesheet" href="css/style.css"> -->
+      <link rel="stylesheet" href="css/style.css">
       <!-- Responsive-->
       <!-- <link rel="stylesheet" href="css/responsive.css"> -->
       <!-- fevicon -->
@@ -27,10 +27,10 @@
       <link rel="stylesheet" href="css/owl.theme.default.min.css">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen"> -->
       <!-- Tambahan -->
-      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+      <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
       <link rel="preconnect" href="https://fonts.gstatic.com">
       <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script> -->
 
 
       <style>
@@ -135,13 +135,13 @@
               if($q%2==0){
                   echo "<div class='row g-0'><div id='pengisi' class='col-lg-5 d-flex align-items-center justify-content-center' 
                   style='background-color:#BBE1FA'><h1 id='spec' class='text-center' style='color:#0F4C75'><b> Sp. " . ucwords($nama_spesialis) . 
-                  "</b></h1></div><div id='keterangan' class='col-lg-7'>";
+                  "</b></h1></div><div id='keterangan' class='col-lg-7 g-0'>";
                   echo "<div class='jumbotron' style='background-color:#0F4C75'>";
               }
               else{
                   echo "<div class='row g-0'><div id='pengisi' class='col-lg-5 d-flex align-items-center justify-content-center' 
                   style='background-color:#3282B8'><h1 id='spec' class='text-center'><b>Sp. " . ucwords($nama_spesialis) . 
-                  "</b></h1></div><div id='keterangan' class='col-lg-7'>";
+                  "</b></h1></div><div id='keterangan' class='col-lg-7 g-0'>";
                   
                   echo "<div class='jumbotron' style='background-color:#0F4C75'>";
               }
