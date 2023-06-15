@@ -1,0 +1,47 @@
+[
+  {
+    "id_pasien": "p0",
+    "name": "Elinor Miranda",
+    "umur": 25,
+    "gender": "female",
+    "phone": "+1 (908) 585-2988",
+    "address": "227 Morton Street, Clarksburg, Iowa, 1283",
+    "id_record": "r2"
+  },
+  {
+    "id_pasien": "p1",
+    "name": "Felecia Bell",
+    "umur": 16,
+    "gender": "female",
+    "phone": "+1 (869) 593-3669",
+    "address": "220 Roebling Street, Dargan, Florida, 3856",
+    "id_record": "r0"
+  },
+  {
+    "id_pasien": "p2",
+    "name": "Landry Parsons",
+    "umur": 50,
+    "gender": "male",
+    "phone": "+1 (967) 600-3242",
+    "address": "864 Arion Place, Cascades, Tennessee, 586",
+    "id_record": "r2"
+  },
+  {
+    "id_pasien": "p3",
+    "name": "Padilla Keller",
+    "umur": 60,
+    "gender": "male",
+    "phone": "+1 (814) 489-2033",
+    "address": "583 Jodie Court, Caln, South Carolina, 1356",
+    "id_record": "r3"
+  },
+  {
+    "id_pasien": "p4",
+    "name": "Shari Logan",
+    "umur": 51,
+    "gender": "female",
+    "phone": "+1 (822) 521-2960",
+    "address": "783 Sandford Street, Interlochen, Rhode Island, 3418",
+    "id_record": "r10"
+  }
+]
