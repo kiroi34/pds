@@ -74,6 +74,7 @@
         // Jadwal
         array_push($jadwal, $document->jadwal);
     }
+    
     $q=0;
     // Echo spesialis dan dokternya
     for ($i = 0; $i < count($spesialis); $i++) {
