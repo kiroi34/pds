@@ -1,0 +1,141 @@
+[{
+  "_id": {
+    "$oid": "60a4a9e8fad05f89507694cb"
+  },
+  "user": "Alice",
+  "timestamp": "2021-05-01T08:00:00",
+  "thread": "Welcome to CV Forum",
+  "message": "Hi, all. Welcome to this forum.",
+  "tags": [
+    "CV"
+  ]
+},{
+  "_id": {
+    "$oid": "60a4a9e8fad05f89507694cc"
+  },
+  "user": "Bob",
+  "timestamp": "2021-05-02T10:30:00",
+  "thread": "Welcome to NLP Forum",
+  "message": "Hi, everyone. I created this forum for our discussion.",
+  "tags": [
+    "NLP"
+  ]
+},{
+  "_id": {
+    "$oid": "60a4a9e8fad05f89507694cd"
+  },
+  "user": "Charlie",
+  "timestamp": "2021-05-03T10:15:30",
+  "thread": "Text Mining with RNN",
+  "message": "Did anyone use RNN before?",
+  "tags": [
+    "NLP",
+    "DL"
+  ]
+},{
+  "_id": {
+    "$oid": "60a4a9e8fad05f89507694ce"
+  },
+  "user": "Diane",
+  "timestamp": "2021-05-04T09:45:15",
+  "thread": "Covid-19 Detection from Chest X-Ray Images",
+  "message": "I am doing this research with SVM. Who is with me?",
+  "tags": [
+    "CV",
+    "ML",
+    "Covid"
+  ]
+},{
+  "_id": {
+    "$oid": "60a4aae7fad05f89507694cf"
+  },
+  "user": "Evan",
+  "timestamp": "2021-05-05T11:05:00",
+  "thread": "Covid-19 Detection from Chest X-Ray Images",
+  "replyTo": {
+    "$oid": "60a4a9e8fad05f89507694ce"
+  },
+  "message": "I am doing it, too, Diane. I use MobileNet, though.",
+  "tags": [
+    "CV",
+    "DL",
+    "Covid"
+  ]
+},{
+  "_id": {
+    "$oid": "60a4ab10fad05f89507694d0"
+  },
+  "user": "Frank",
+  "timestamp": "2021-05-06T07:35:20",
+  "thread": "Text Mining with RNN",
+  "replyTo": {
+    "$oid": "60a4a9e8fad05f89507694cd"
+  },
+  "message": "I did. It is cool. :)",
+  "tags": [
+    "NLP",
+    "DL"
+  ]
+},{
+  "_id": {
+    "$oid": "60a4ab4ffad05f89507694d1"
+  },
+  "user": "George",
+  "timestamp": "2021-05-07T07:55:55",
+  "thread": "Covid-19 Detection from Chest X-Ray Images",
+  "replyTo": {
+    "$oid": "60a4a9e8fad05f89507694ce"
+  },
+  "message": "Where did you get the dataset?",
+  "tags": [
+    "CV",
+    "Covid"
+  ]
+},{
+  "_id": {
+    "$oid": "60a4ab73fad05f89507694d2"
+  },
+  "user": "Diane",
+  "timestamp": "2021-05-08T08:15:15",
+  "thread": "Covid-19 Detection from Chest X-Ray Images",
+  "replyTo": {
+    "$oid": "60a4aae7fad05f89507694cf"
+  },
+  "message": "Really? What is the F1-score you got?",
+  "tags": [
+    "CV",
+    "ML",
+    "DL",
+    "Covid"
+  ]
+},{
+  "_id": {
+    "$oid": "60a4ab9cfad05f89507694d3"
+  },
+  "user": "Diane",
+  "timestamp": "2021-05-08T08:15:20",
+  "thread": "Covid-19 Detection from Chest X-Ray Images",
+  "replyTo": {
+    "$oid": "60a4ab4ffad05f89507694d1"
+  },
+  "message": "I got it from JHU.",
+  "tags": [
+    "CV",
+    "Covid"
+  ]
+},{
+  "_id": {
+    "$oid": "60a4abc2fad05f89507694d4"
+  },
+  "user": "Charlie",
+  "timestamp": "2021-05-10T07:50:40",
+  "thread": "Text Mining with RNN",
+  "replyTo": {
+    "$oid": "60a4ab10fad05f89507694d0"
+  },
+  "message": "Can you refer me some good learning materials to start with?",
+  "tags": [
+    "NLP",
+    "DL"
+  ]
+}]

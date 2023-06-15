@@ -1,0 +1,19 @@
+[
+  '{{repeat(5, 7)}}',
+  {
+    _id: '{{objectId()}}',
+    index: '{{index()}}',
+    spesialis: '{{random("mata", "penyakit dalam", "paru", "kulit dan kelamin", "kandungan", "THT", "Gigi", "umum", "anak", "bedah umum")}}',
+        registered: '{{date(new Date(2014, 0, 1), new Date(), "YYYY-MM-ddThh:mm:ss Z")}}',
+        biodata: [
+      {
+        name: '{{firstName()}} {{surname()}}',
+        gender: '{{gender()}}',
+        DOB: '{{date(new Date(1960, 0, 1), new Date(1990, 0, 1), "dd-MM-YYYY")}}',
+        email: '{{email()}}',
+        phone: '+1 {{phone()}}',
+        address: '{{integer(100, 999)}} {{street()}}, {{city()}}, {{state()}}, {{integer(100, 10000)}}'
+      }
+    ]
+  }
+]

@@ -1,0 +1,152 @@
+[
+  {
+    "_id": "6489c5c02d6959be75f5fda8",
+    "index": 0,
+    "spesialis": "umum",
+    "jadwal": ["08:00-12:00", "15.00-18.00"],
+    "registered": "2019-10-29T10:47:04 -07:00",
+    "biodata": {
+      "name": "Cobb Melton",
+      "gender": "male",
+      "DOB": "12-06-1981",
+      "email": "cobbmelton@artworlds.com",
+      "phone": "+1 (907) 527-3211",
+      "address": "639 McKibben Street, Tioga, Washington, 6565"
+    }
+  },
+  {
+    "_id": "6489c5c048cea6b4b3937fad",
+    "index": 1,
+    "spesialis": "anak",
+    "jadwal": ["08:00-12:00", "15.00-18.00"],
+    "registered": "2016-12-31T06:07:47 -07:00",
+    "biodata": {
+      "name": "Delia Gray",
+      "gender": "female",
+      "DOB": "10-10-1969",
+      "email": "deliagray@artworlds.com",
+      "phone": "+1 (803) 490-3724",
+      "address": "853 Oriental Boulevard, Laurelton, Hawaii, 2160"
+    }
+  },
+  {
+    "_id": "6489c5c0caf1622a4ea20760",
+    "index": 2,
+    "spesialis": "mata",
+    "jadwal": ["09:00-12:00", "13.00-17.00"],
+    "registered": "2021-10-08T03:12:48 -07:00",
+    "biodata": {
+      "name": "Sheppard Franco",
+      "gender": "male",
+      "DOB": "12-07-1960",
+      "email": "sheppardfranco@artworlds.com",
+      "phone": "+1 (943) 500-2796",
+      "address": "496 Oceanview Avenue, Stonybrook, Marshall Islands, 8922"
+    }
+  },
+  {
+    "_id": "6489c5c0e4c34cf12814d695",
+    "index": 3,
+    "spesialis": "THT",
+    "jadwal": ["08:00-12:00", "14.00-18.00"],
+    "registered": "2017-04-30T05:55:26 -07:00",
+    "biodata": {
+      "name": "Farrell Wiley",
+      "gender": "male",
+      "DOB": "02-02-1965",
+      "email": "farrellwiley@artworlds.com",
+      "phone": "+1 (988) 570-2171",
+      "address": "933 Sutter Avenue, Ryderwood, New Hampshire, 6511"
+    }
+  },
+  {
+    "_id": "6489c5c0460be9baec19ce4f",
+    "index": 4,
+    "spesialis": "anak",
+    "jadwal": ["10:00-14:00", "17.00-21.00"],
+    "registered": "2019-10-20T02:02:27 -07:00",
+    "biodata": {
+      "name": "Susanne Oneill",
+      "gender": "female",
+      "DOB": "07-09-1985",
+      "email": "susanneoneill@artworlds.com",
+      "phone": "+1 (899) 458-3430",
+      "address": "749 Burnett Street, Thermal, New Mexico, 9046"
+    }
+  },
+  {
+    "_id": "6489c5c0fadb2dc166c55aa6",
+    "index": 5,
+    "spesialis": "umum",
+    "jadwal": ["09:00-15:00"],
+    "registered": "2019-08-15T03:26:48 -07:00",
+    "biodata": {
+      "name": "Brittany Sanchez",
+      "gender": "female",
+      "DOB": "07-09-1970",
+      "email": "brittanysanchez@artworlds.com",
+      "phone": "+1 (891) 404-2467",
+      "address": "476 Irving Avenue, Rossmore, Virginia, 3335"
+    }
+  },
+  {
+    "_id": "6489c5c00df944bf1225d21c",
+    "index": 6,
+    "spesialis": "anak",
+    "jadwal": ["12.00-18.00"],
+    "registered": "2020-07-07T11:18:01 -07:00",
+    "biodata": {
+      "name": "Alison Mosley",
+      "gender": "female",
+      "DOB": "26-03-1975",
+      "email": "alisonmosley@artworlds.com",
+      "phone": "+1 (846) 532-3957",
+      "address": "915 Ridge Boulevard, Crucible, Maryland, 6470"
+    }
+  },
+  {
+    "_id": "6489c5c0e979e30b6cceae86",
+    "index": 7,
+    "spesialis": "gigi",
+    "jadwal": ["10:00-14:00", "15.00-19.00"],
+    "registered": "2019-04-25T12:13:14 -07:00",
+    "biodata": {
+      "name": "Frost Noel",
+      "gender": "male",
+      "DOB": "02-11-1970",
+      "email": "frostnoel@artworlds.com",
+      "phone": "+1 (969) 436-2604",
+      "address": "672 Vine Street, Gibsonia, North Carolina, 3746"
+    }
+  },
+  {
+    "_id": "6489c5c0b94af6325d7af11a",
+    "index": 8,
+    "spesialis": "THT",
+    "jadwal": ["15.00-20.00"],
+    "registered": "2020-05-24T12:00:43 -07:00",
+    "biodata": {
+      "name": "Pearl Welch",
+      "gender": "female",
+      "DOB": "26-04-1961",
+      "email": "pearlwelch@artworlds.com",
+      "phone": "+1 (901) 480-3043",
+      "address": "857 Krier Place, Belleview, New Jersey, 2793"
+    }
+  },
+  {
+    "_id": "6489c5c0e722865200d6b23b",
+    "index": 9,
+    "spesialis": "gigi",
+    "jadwal": ["11:00-13:00", "15.00-18.00"],
+    "registered": "2015-03-21T03:02:35 -07:00",
+    "biodata": {
+      "name": "John Hodges",
+      "gender": "female",
+      "DOB": "10-12-1967",
+      "email": "johnhodges@artworlds.com",
+      "phone": "+1 (998) 454-3152",
+      "address": "734 Kermit Place, Dola, Florida, 119"
+    }
+  }
+]

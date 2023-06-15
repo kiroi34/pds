@@ -1,0 +1,172 @@
+[
+  {
+    "_id": "6489c3642b90e8f7d8a4a72f",
+    "index": 0,
+    "spesialis": "mata",
+    "jadwal": "undefined",
+    "registered": "2015-10-18T04:34:40 -07:00",
+    "biodata": [
+      {
+        "name": "Helena Ford",
+        "gender": "female",
+        "DOB": "11-11-1984",
+        "email": "helenaford@artworlds.com",
+        "phone": "+1 (918) 551-3999",
+        "address": "184 Hunts Lane, Calvary, Michigan, 2006"
+      }
+    ]
+  },
+  {
+    "_id": "6489c36409ff791b92e14904",
+    "index": 1,
+    "spesialis": "THT",
+    "jadwal": "undefined",
+    "registered": "2016-07-08T12:23:51 -07:00",
+    "biodata": [
+      {
+        "name": "Rasmussen Whitley",
+        "gender": "male",
+        "DOB": "22-04-1960",
+        "email": "rasmussenwhitley@artworlds.com",
+        "phone": "+1 (868) 426-2660",
+        "address": "418 Roosevelt Court, Harrodsburg, Utah, 8476"
+      }
+    ]
+  },
+  {
+    "_id": "6489c364e443b2b68bff53fe",
+    "index": 2,
+    "spesialis": "anak",
+    "jadwal": "undefined",
+    "registered": "2016-01-31T10:58:40 -07:00",
+    "biodata": [
+      {
+        "name": "Winnie Marquez",
+        "gender": "female",
+        "DOB": "14-10-1966",
+        "email": "winniemarquez@artworlds.com",
+        "phone": "+1 (896) 471-3990",
+        "address": "604 Trucklemans Lane, Carrsville, North Dakota, 6466"
+      }
+    ]
+  },
+  {
+    "_id": "6489c364241900e5e1cfb3ad",
+    "index": 3,
+    "spesialis": "gigi",
+    "jadwal": "undefined",
+    "registered": "2018-01-23T10:32:11 -07:00",
+    "biodata": [
+      {
+        "name": "Freida Conrad",
+        "gender": "female",
+        "DOB": "21-11-1976",
+        "email": "freidaconrad@artworlds.com",
+        "phone": "+1 (950) 422-3303",
+        "address": "945 Box Street, Nutrioso, Rhode Island, 6484"
+      }
+    ]
+  },
+  {
+    "_id": "6489c3648e0e49f3c8b65515",
+    "index": 4,
+    "spesialis": "gigi",
+    "jadwal": "undefined",
+    "registered": "2020-06-26T12:32:13 -07:00",
+    "biodata": [
+      {
+        "name": "Merle Bowen",
+        "gender": "female",
+        "DOB": "01-06-1968",
+        "email": "merlebowen@artworlds.com",
+        "phone": "+1 (927) 590-2330",
+        "address": "445 Berriman Street, Grimsley, Alabama, 6191"
+      }
+    ]
+  },
+  {
+    "_id": "6489c3645024a9ae9c1f3be8",
+    "index": 5,
+    "spesialis": "THT",
+    "jadwal": "undefined",
+    "registered": "2022-01-04T05:38:00 -07:00",
+    "biodata": [
+      {
+        "name": "Polly Mccullough",
+        "gender": "female",
+        "DOB": "02-05-1960",
+        "email": "pollymccullough@artworlds.com",
+        "phone": "+1 (869) 426-3777",
+        "address": "955 Glenwood Road, Hickory, Georgia, 9780"
+      }
+    ]
+  },
+  {
+    "_id": "6489c36454e41b32a4c4d0d8",
+    "index": 6,
+    "spesialis": "mata",
+    "jadwal": "undefined",
+    "registered": "2014-10-13T12:07:33 -07:00",
+    "biodata": [
+      {
+        "name": "Riley Good",
+        "gender": "male",
+        "DOB": "20-06-1966",
+        "email": "rileygood@artworlds.com",
+        "phone": "+1 (862) 451-3520",
+        "address": "981 Lincoln Terrace, Emerald, Federated States Of Micronesia, 6069"
+      }
+    ]
+  },
+  {
+    "_id": "6489c3645573827ffd0fc6f8",
+    "index": 7,
+    "spesialis": "umum",
+    "jadwal": "undefined",
+    "registered": "2017-03-26T01:09:46 -07:00",
+    "biodata": [
+      {
+        "name": "Leola Rutledge",
+        "gender": "female",
+        "DOB": "14-03-1969",
+        "email": "leolarutledge@artworlds.com",
+        "phone": "+1 (982) 508-2457",
+        "address": "728 Willow Street, Ruckersville, North Carolina, 358"
+      }
+    ]
+  },
+  {
+    "_id": "6489c36478db046df9b50b8e",
+    "index": 8,
+    "spesialis": "umum",
+    "jadwal": "undefined",
+    "registered": "2021-09-24T06:09:40 -07:00",
+    "biodata": [
+      {
+        "name": "Dalton Vaughan",
+        "gender": "male",
+        "DOB": "02-08-1971",
+        "email": "daltonvaughan@artworlds.com",
+        "phone": "+1 (864) 511-2920",
+        "address": "912 Ford Street, Boling, Montana, 1361"
+      }
+    ]
+  },
+  {
+    "_id": "6489c3642eb59b2467765dc1",
+    "index": 9,
+    "spesialis": "umum",
+    "jadwal": "undefined",
+    "registered": "2016-12-28T09:08:55 -07:00",
+    "biodata": [
+      {
+        "name": "Jill Slater",
+        "gender": "female",
+        "DOB": "04-11-1972",
+        "email": "jillslater@artworlds.com",
+        "phone": "+1 (883) 549-2977",
+        "address": "374 Oriental Boulevard, Strong, Maryland, 2006"
+      }
+    ]
+  }
+]
