@@ -1,47 +1,92 @@
 [
   {
-    "id_pasien": "p0",
-    "name": "Elinor Miranda",
-    "umur": 25,
-    "gender": "female",
-    "phone": "+1 (908) 585-2988",
-    "address": "227 Morton Street, Clarksburg, Iowa, 1283",
-    "id_record": "r2"
-  },
-  {
     "id_pasien": "p1",
-    "name": "Felecia Bell",
-    "umur": 16,
-    "gender": "female",
-    "phone": "+1 (869) 593-3669",
-    "address": "220 Roebling Street, Dargan, Florida, 3856",
-    "id_record": "r0"
+    "name_pasien": "Klein Mejia",
+    "DOB_pasien": "14-05-2002",
+    "gender_pasien": "male",
+    "phone_pasien": "+1 (913) 599-2311",
+    "address_pasien": "278 Woodruff Avenue, Conestoga, Colorado, 1803",
+    "id_record": "r2"
   },
   {
     "id_pasien": "p2",
-    "name": "Landry Parsons",
-    "umur": 50,
-    "gender": "male",
-    "phone": "+1 (967) 600-3242",
-    "address": "864 Arion Place, Cascades, Tennessee, 586",
-    "id_record": "r2"
-  },
-  {
-    "id_pasien": "p3",
-    "name": "Padilla Keller",
-    "umur": 60,
-    "gender": "male",
-    "phone": "+1 (814) 489-2033",
-    "address": "583 Jodie Court, Caln, South Carolina, 1356",
+    "name_pasien": "Mccormick Ward",
+    "DOB_pasien": "04-01-2004",
+    "gender_pasien": "male",
+    "phone_pasien": "+1 (931) 573-2328",
+    "address_pasien": "339 Montauk Avenue, Noblestown, New Hampshire, 744",
     "id_record": "r3"
   },
   {
+    "id_pasien": "p3",
+    "name_pasien": "Franks Castillo",
+    "DOB_pasien": "17-06-1991",
+    "gender_pasien": "male",
+    "phone_pasien": "+1 (880) 565-3030",
+    "address_pasien": "245 Riverdale Avenue, Newcastle, American Samoa, 4937",
+    "id_record": "r6"
+  },
+  {
     "id_pasien": "p4",
-    "name": "Shari Logan",
-    "umur": 51,
-    "gender": "female",
-    "phone": "+1 (822) 521-2960",
-    "address": "783 Sandford Street, Interlochen, Rhode Island, 3418",
-    "id_record": "r10"
+    "name_pasien": "Lester Mosley",
+    "DOB_pasien": "19-12-1990",
+    "gender_pasien": "male",
+    "phone_pasien": "+1 (944) 447-2571",
+    "address_pasien": "809 Fayette Street, Kirk, Pennsylvania, 665",
+    "id_record": "r2"
+  },
+  {
+    "id_pasien": "p5",
+    "name_pasien": "Cecilia Newton",
+    "DOB_pasien": "11-01-1997",
+    "gender_pasien": "female",
+    "phone_pasien": "+1 (910) 536-2166",
+    "address_pasien": "488 Cooke Court, Harleigh, Puerto Rico, 2815",
+    "id_record": "r2"
+  },
+  {
+    "id_pasien": "p6",
+    "name_pasien": "Miranda Matthews",
+    "DOB_pasien": "16-09-1981",
+    "gender_pasien": "female",
+    "phone_pasien": "+1 (903) 482-2641",
+    "address_pasien": "106 Prescott Place, Belva, Nebraska, 2614",
+    "id_record": "r3"
+  },
+  {
+    "id_pasien": "p7",
+    "name_pasien": "Emilia Nixon",
+    "DOB_pasien": "01-06-1999",
+    "gender_pasien": "female",
+    "phone_pasien": "+1 (872) 456-3252",
+    "address_pasien": "124 Commerce Street, Gulf, Wyoming, 9581",
+    "id_record": "r1"
+  },
+  {
+    "id_pasien": "p8",
+    "name_pasien": "Reese Frazier",
+    "DOB_pasien": "11-03-1982",
+    "gender_pasien": "male",
+    "phone_pasien": "+1 (862) 459-2156",
+    "address_pasien": "291 Logan Street, Hayden, Iowa, 2322",
+    "id_record": "r3"
+  },
+  {
+    "id_pasien": "p9",
+    "name_pasien": "Lindsay Hunter",
+    "DOB_pasien": "27-12-1982",
+    "gender_pasien": "male",
+    "phone_pasien": "+1 (801) 534-2355",
+    "address_pasien": "770 Nostrand Avenue, Hanover, New York, 6915",
+    "id_record": "r9"
+  },
+  {
+    "id_pasien": "p10",
+    "name_pasien": "Sondra Rivera",
+    "DOB_pasien": "20-09-1995",
+    "gender_pasien": "female",
+    "phone_pasien": "+1 (904) 498-2662",
+    "address_pasien": "905 Ralph Avenue, Groton, Ohio, 6882",
+    "id_record": "r9"
   }
 ]
