@@ -6,7 +6,7 @@
     "gender_pasien": "male",
     "phone_pasien": "+1 (913) 599-2311",
     "address_pasien": "278 Woodruff Avenue, Conestoga, Colorado, 1803",
-    "id_record": "r2"
+    "id_record": "r0, r5"
   },
   {
     "id_pasien": "p2",
@@ -15,7 +15,7 @@
     "gender_pasien": "male",
     "phone_pasien": "+1 (931) 573-2328",
     "address_pasien": "339 Montauk Avenue, Noblestown, New Hampshire, 744",
-    "id_record": "r3"
+    "id_record": "r1, r6"
   },
   {
     "id_pasien": "p3",
@@ -24,7 +24,7 @@
     "gender_pasien": "male",
     "phone_pasien": "+1 (880) 565-3030",
     "address_pasien": "245 Riverdale Avenue, Newcastle, American Samoa, 4937",
-    "id_record": "r6"
+    "id_record": "r2"
   },
   {
     "id_pasien": "p4",
@@ -33,7 +33,7 @@
     "gender_pasien": "male",
     "phone_pasien": "+1 (944) 447-2571",
     "address_pasien": "809 Fayette Street, Kirk, Pennsylvania, 665",
-    "id_record": "r2"
+    "id_record": "r3, r7"
   },
   {
     "id_pasien": "p5",
@@ -42,7 +42,7 @@
     "gender_pasien": "female",
     "phone_pasien": "+1 (910) 536-2166",
     "address_pasien": "488 Cooke Court, Harleigh, Puerto Rico, 2815",
-    "id_record": "r2"
+    "id_record": "r4, r8"
   },
   {
     "id_pasien": "p6",
@@ -51,7 +51,7 @@
     "gender_pasien": "female",
     "phone_pasien": "+1 (903) 482-2641",
     "address_pasien": "106 Prescott Place, Belva, Nebraska, 2614",
-    "id_record": "r3"
+    "id_record": "r9, r16"
   },
   {
     "id_pasien": "p7",
@@ -60,7 +60,7 @@
     "gender_pasien": "female",
     "phone_pasien": "+1 (872) 456-3252",
     "address_pasien": "124 Commerce Street, Gulf, Wyoming, 9581",
-    "id_record": "r1"
+    "id_record": "r10"
   },
   {
     "id_pasien": "p8",
@@ -69,7 +69,7 @@
     "gender_pasien": "male",
     "phone_pasien": "+1 (862) 459-2156",
     "address_pasien": "291 Logan Street, Hayden, Iowa, 2322",
-    "id_record": "r3"
+    "id_record": "r11, r15 , 17"
   },
   {
     "id_pasien": "p9",
@@ -78,7 +78,7 @@
     "gender_pasien": "male",
     "phone_pasien": "+1 (801) 534-2355",
     "address_pasien": "770 Nostrand Avenue, Hanover, New York, 6915",
-    "id_record": "r9"
+    "id_record": "r12"
   },
   {
     "id_pasien": "p10",
@@ -87,6 +87,6 @@
     "gender_pasien": "female",
     "phone_pasien": "+1 (904) 498-2662",
     "address_pasien": "905 Ralph Avenue, Groton, Ohio, 6882",
-    "id_record": "r9"
+    "id_record": "r13, r14"
   }
 ]

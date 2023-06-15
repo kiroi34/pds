@@ -1,7 +1,7 @@
 [{
         "id_record": "r0",
         "id_dokter": "d7",
-        "id_pasien": "p2",
+        "id_pasien": "p1",
         "riwayat_obat": [
             "Panadol",
             "Loratadine",
@@ -10,12 +10,12 @@
         "gejala_pasien": "Sesak nafas,Ruam / gatal-gatal,Muntah-muntah",
         "diagnosa_pasien": "Campak",
         "tindakan_dilakukan": "Diresepkan obat",
-        "tanggal_rekam_medis": "18-09-2016"
+        "tanggal_rekam_medis": "18-09-2019"
     },
     {
         "id_record": "r1",
         "id_dokter": "d5",
-        "id_pasien": "p9",
+        "id_pasien": "p2",
         "riwayat_obat": [
             "Neuralgin",
             "Ponstan",
@@ -29,7 +29,7 @@
     {
         "id_record": "r2",
         "id_dokter": "d10",
-        "id_pasien": "p9",
+        "id_pasien": "p3",
         "riwayat_obat": [
             "Neuralgin",
             "Loratadine",
@@ -43,7 +43,7 @@
     {
         "id_record": "r3",
         "id_dokter": "d3",
-        "id_pasien": "p8",
+        "id_pasien": "p4",
         "riwayat_obat": [
             "Amlodipine",
             "Lameson",
@@ -57,7 +57,7 @@
     {
         "id_record": "r4",
         "id_dokter": "d1",
-        "id_pasien": "p9",
+        "id_pasien": "p5",
         "riwayat_obat": [
             "Panadol",
             "Loratadine",
@@ -66,12 +66,12 @@
         "gejala_pasien": "Demam,Diare,Kelelahan",
         "diagnosa_pasien": "Cacar air",
         "tindakan_dilakukan": "Diresepkan obat",
-        "tanggal_rekam_medis": "28-10-2012"
+        "tanggal_rekam_medis": "28-10-2022"
     },
     {
         "id_record": "r5",
         "id_dokter": "d4",
-        "id_pasien": "p5",
+        "id_pasien": "p1",
         "riwayat_obat": [
             "Lipitor",
             "Loratadine",
@@ -85,7 +85,7 @@
     {
         "id_record": "r6",
         "id_dokter": "d4",
-        "id_pasien": "p3",
+        "id_pasien": "p2",
         "riwayat_obat": [
             "Neuralgin",
             "Voltadex",
@@ -94,12 +94,12 @@
         "gejala_pasien": "Sesak nafas,Ruam / gatal-gatal,Mood swing",
         "diagnosa_pasien": "Katarak",
         "tindakan_dilakukan": "Dirujuk ke rumah sakit",
-        "tanggal_rekam_medis": "03-11-2011"
+        "tanggal_rekam_medis": "03-11-2021"
     },
     {
         "id_record": "r7",
         "id_dokter": "d1",
-        "id_pasien": "p10",
+        "id_pasien": "p4",
         "riwayat_obat": [
             "Amlodipine",
             "Ponstan",
@@ -113,6 +113,118 @@
     {
         "id_record": "r8",
         "id_dokter": "d1",
+        "id_pasien": "p5",
+        "riwayat_obat": [
+            "Neuralgin",
+            "Ponstan",
+            "Cenacort"
+        ],
+        "gejala_pasien": "Migrain,Inflamasi,Mood swing",
+        "diagnosa_pasien": "Cacar air",
+        "tindakan_dilakukan": "Penyuntikan obat/vitamin",
+        "tanggal_rekam_medis": "07-09-2020"
+    },
+    {
+        "id_record": "r9",
+        "id_dokter": "d4",
+        "id_pasien": "p6",
+        "riwayat_obat": [
+            "Erythromycin",
+            "Ponstan",
+            "Epexol"
+        ],
+        "gejala_pasien": "Demam,Inflamasi,Muntah-muntah",
+        "diagnosa_pasien": "Muntaber",
+        "tindakan_dilakukan": "Dirujuk ke rumah sakit",
+        "tanggal_rekam_medis": "02-01-2022"
+    },
+    {
+        "id_record": "r10",
+        "id_dokter": "d1",
+        "id_pasien": "p7",
+        "riwayat_obat": [
+            "Neuralgin",
+            "Ponstan",
+            "Cenacort"
+        ],
+        "gejala_pasien": "Migrain,Inflamasi,Mood swing",
+        "diagnosa_pasien": "Cacar air",
+        "tindakan_dilakukan": "Penyuntikan obat/vitamin",
+        "tanggal_rekam_medis": "27-02-2021"
+    },
+    {
+        "id_record": "r11",
+        "id_dokter": "d4",
+        "id_pasien": "p8",
+        "riwayat_obat": [
+            "Erythromycin",
+            "Ponstan",
+            "Epexol"
+        ],
+        "gejala_pasien": "Demam,Inflamasi,Muntah-muntah",
+        "diagnosa_pasien": "Muntaber",
+        "tindakan_dilakukan": "Dirujuk ke rumah sakit",
+        "tanggal_rekam_medis": "26-11-2019"
+    },
+    {
+        "id_record": "r12",
+        "id_dokter": "d1",
+        "id_pasien": "p9",
+        "riwayat_obat": [
+            "Neuralgin",
+            "Ponstan",
+            "Cenacort"
+        ],
+        "gejala_pasien": "Migrain,Inflamasi,Mood swing",
+        "diagnosa_pasien": "Cacar air",
+        "tindakan_dilakukan": "Penyuntikan obat/vitamin",
+        "tanggal_rekam_medis": "07-02-2010"
+    },
+    {
+        "id_record": "r13",
+        "id_dokter": "d4",
+        "id_pasien": "p10",
+        "riwayat_obat": [
+            "Erythromycin",
+            "Ponstan",
+            "Epexol"
+        ],
+        "gejala_pasien": "Demam,Inflamasi,Muntah-muntah",
+        "diagnosa_pasien": "Muntaber",
+        "tindakan_dilakukan": "Dirujuk ke rumah sakit",
+        "tanggal_rekam_medis": "16-03-2020"
+    },
+    {
+        "id_record": "r14",
+        "id_dokter": "d1",
+        "id_pasien": "p10",
+        "riwayat_obat": [
+            "Neuralgin",
+            "Ponstan",
+            "Cenacort"
+        ],
+        "gejala_pasien": "Migrain,Inflamasi,Mood swing",
+        "diagnosa_pasien": "Cacar air",
+        "tindakan_dilakukan": "Penyuntikan obat/vitamin",
+        "tanggal_rekam_medis": "04-06-2015"
+    },
+    {
+        "id_record": "r15",
+        "id_dokter": "d4",
+        "id_pasien": "p8",
+        "riwayat_obat": [
+            "Erythromycin",
+            "Ponstan",
+            "Epexol"
+        ],
+        "gejala_pasien": "Demam,Inflamasi,Muntah-muntah",
+        "diagnosa_pasien": "Muntaber",
+        "tindakan_dilakukan": "Dirujuk ke rumah sakit",
+        "tanggal_rekam_medis": "13-02-2020"
+    },
+    {
+        "id_record": "r16",
+        "id_dokter": "d1",
         "id_pasien": "p6",
         "riwayat_obat": [
             "Neuralgin",
@@ -125,7 +237,7 @@
         "tanggal_rekam_medis": "07-02-2010"
     },
     {
-        "id_record": "r9",
+        "id_record": "r17",
         "id_dokter": "d4",
         "id_pasien": "p8",
         "riwayat_obat": [
@@ -136,6 +248,6 @@
         "gejala_pasien": "Demam,Inflamasi,Muntah-muntah",
         "diagnosa_pasien": "Muntaber",
         "tindakan_dilakukan": "Dirujuk ke rumah sakit",
-        "tanggal_rekam_medis": "16-01-2019"
+        "tanggal_rekam_medis": "26-09-2022"
     }
 ]
