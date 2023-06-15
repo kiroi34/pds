@@ -28,11 +28,11 @@
    <link rel="stylesheet" href="css/owl.carousel.min.css">
    <link rel="stylesheet" href="css/owl.theme.default.min.css">
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
-
     <style>
+        
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f2f2f2;
+            /* font-family: Arial, sans-serif; */
+            background-color: #CEEBED;
         }
 
         h2 {
@@ -126,5 +126,17 @@
         <input type="submit" value="Sign Up" style="margin: 0 auto; display: block;">
         <h5>Already have an account? </h5> <a href="loginform.php" style="margin: 0 auto; display: block; font-weight: bold; font-size: 13px" >Click Here</a>
     </form>
+    <!-- Javascript files-->
+    <script src="js/jquery.min.js"></script>
+      <script src="js/popper.min.js"></script>
+      <script src="js/bootstrap.bundle.min.js"></script>
+      <script src="js/jquery-3.0.0.min.js"></script>
+      <script src="js/plugin.js"></script>
+      <!-- sidebar -->
+      <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+      <script src="js/custom.js"></script>
+      <!-- javascript --> 
+      <script src="js/owl.carousel.js"></script>
+      <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
 </body>
 </html>
