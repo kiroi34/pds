@@ -11,9 +11,9 @@
     session_start();
     ?>
     <style>
-        body {
+        /* body {
             background-color: #1b262c;
-        }
+        } */
 
         h1,
         h2,
@@ -24,23 +24,12 @@
             color: #ffffff;
         }
 
-        .jadwal {
-            border: none;
-            background-image: linear-gradient(to right, #3282B8, #BBE1FA);
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
         }
-
-        .jumbotron {
-            padding: 2rem;
-            background-color: #e9ecef;
-
-        }
-
-        #spec{
-            font-size: 6.5em;
-        }
-
-        
-
     </style>
 </head>
 
@@ -58,89 +47,120 @@
     $collection = $collectionName;
 
     $cursor = $manager->executeQuery("$database.$collection", $query);
+    $cursor2 = $manager->executeQuery("$database.$collection", $query);
 
-    $spesialis = [];
-    $nama_dokter = [];
-    $jadwal = [];
+    $foto = [];
+    $id_dokter = [];
+    $printed = 0;
+    $printedd = 0;
+    echo "<a href='insert_doctor.php'>Insert</a>";
 
-    // Masukkan ke array spesialis
+    // Ambil foto
     foreach ($cursor as $document) {
-        // Spesialis
-        array_push($spesialis, $document->spesialis);
-        // Nama dokter
-        $fieldObject = $document->biodata;
-        $nestedField = $fieldObject->name;
-        array_push($nama_dokter, $nestedField);
-        // Jadwal
-        array_push($jadwal, $document->jadwal);
-    }
-    
-    $q=0;
-    // Echo spesialis dan dokternya
-    for ($i = 0; $i < count($spesialis); $i++) {
-        // ambil nama spesialis
-        $nama_spesialis = $spesialis[$i];
-        $temp = [];
-        if ($nama_spesialis != 'done') {
-            $q++;
-            if($q%2==0){
-                echo "<div class='row g-0'><div id='pengisi' class='col-lg-5 d-flex align-items-center justify-content-center' style='background-color:#BBE1FA'><h1 id='spec' class='text-center' style='color:#0F4C75'><b> Sp. " . ucwords($nama_spesialis) . "</b></h1></div><div id='keterangan' class='col-lg-7'>";
-                echo "<div class='jumbotron' style='background-color:#0F4C75'>";
+        $jsonString = json_encode($document); // Convert the document object to a JSON string
+        $decoded = json_decode($jsonString); // Decode the JSON string
+        foreach ($decoded as $key => $value) {
+            if ($key == 'foto') {
+                array_push($foto, $value);
             }
-            else{
-                echo "<div class='row g-0'><div id='pengisi' class='col-lg-5 d-flex align-items-center justify-content-center' style='background-color:#3282B8'><h1 id='spec' class='text-center'><b>Sp. " . ucwords($nama_spesialis) . "</b></h1></div><div id='keterangan' class='col-lg-7'>";
-                echo "<div class='jumbotron' style='background-color:#0F4C75'>";
+            if ($key == 'id_dokter') {
+                array_push($id_dokter, $value);
             }
-            
-            for ($j = 0; $j < count($spesialis); $j++) { // cari yang sama dengan $nama_spesialis
-                if ($spesialis[$j] == $nama_spesialis && $spesialis[$j] != 'done') {
-                    array_push($temp, $j);
-                    $spesialis[$j] = 'done';
-                }
-            }
-
-            for ($k = 0; $k < count($temp); $k++) { //echo semua yg diperlukan di dokter itu
-                echo "<div class='row g-0'><div class='col-lg-6'>";
-                echo "<img src='https://drive.google.com/uc?export=view&id=1dAEbPNhBnXC1wU16elJYHfIhPlirR-77' width='300' height='380'>";
-                echo "</div>";
-                echo "<div class='col-lg-6'>";
-                // Echo nama dokter
-                echo "<br><h1>" . $nama_dokter[$temp[$k]] . "</h1><br>";
-                echo "<h5>Schedule : </h5>";
-                // Echo jadwal dokter
-                for ($l = 0; $l < count($jadwal[$temp[$k]]); $l++) {
-                    $tempp = $jadwal[$temp[$k]];
-                    $modalId = "exampleModal" . $temp[$k] . $l; // Generate unique modal id
-                    echo "<button type='button' class='btn btn-primary btn-lg jadwal' data-bs-toggle='modal' data-bs-target='#$modalId'>" . $tempp[$l] . "</button>";
-                    echo '<br><br>';
-                    // Modal content
-                    echo "<div class='modal fade' id='$modalId' tabindex='-1' role='dialog' aria-labelledby='exampleModalLabel' aria-hidden='true'>";
-                    echo "<div class='modal-dialog' role='document'>";
-                    echo "<div class='modal-content' style='background-color:#0F4C75'>";
-                    echo "<div class='modal-header'>";
-                    echo "<h5 class='modal-title' id='exampleModalLabel'>Please confirm your appointment</h5>";
-                    echo "<button type='button' class='btn-close' data-bs-dismiss='modal' aria-label='Close'>";
-                    echo "</button>";
-                    echo "</div>";
-                    echo "<div class='modal-body'>";
-                    echo "<h2>" . $nama_dokter[$temp[$k]] . "</h2>";
-                    echo "<h5>Specializes in: " . $nama_spesialis . "</h5>";
-                    echo "<br><h6>Time: " . $tempp[$l] . "</h6>";
-                    echo "</div>";
-                    echo "<div class='modal-footer'>";
-                    echo "<button type='button' class='btn btn-danger' data-bs-dismiss='modal'>Cancel</button>";
-                    echo "<button type='button' class='btn btn-primary'>Confirm</button>";
-                    echo "</div>";
-                    echo "</div>";
-                    echo "</div>";
-                    echo "</div>";
-                }
-                echo "<br><br>";
-                echo "</div></div><br><br>"; // Close the row and col-lg-3 divs
-            }
-
-            echo "</div></div></div>"; // Close the jumbotron div
         }
+    }
+
+    $counter = 0;
+    foreach ($cursor2 as $document) {
+        $printed = 0;
+        $printedd = 0;
+        $jsonString = json_encode($document); // Convert the document object to a JSON string
+        $decoded = json_decode($jsonString); // Decode the JSON string
+
+        echo "<div class=row>";
+        echo "<div class='col-lg-2'>";
+        echo "<img src='" . $foto[$counter] . "' width='200' height='260'>";
+        echo "<br><br>";
+        // Tombol update/edit
+        echo "<a class='btn btn-warning' href='../pds_project/edit_doctor.php?dokter=" . $id_dokter[$counter] . "'>Edit</a>";
+        // Tombol delete
+        echo "<a style='margin-left:10px' class='btn btn-danger' href='../pds_project/delete_doctor.php?dokter=" . $id_dokter[$counter] . "'>Delete</a>";
+        echo "</div>";
+        $counter++;
+        foreach ($decoded as $key => $value) {
+            // Skip kalo id
+            if ($key == '_id') {
+                continue;
+            }
+            // Hari dan jam praktek
+            elseif (is_array($value)) { // Untuk hari dan jam praktek
+                // Cetak table header sekali saja
+                if ($printedd != 1) { //Cetak hari kerja
+                    echo "<div class='col-lg-2'>";
+                    echo "<table>";
+                    echo "<tr>";
+                    echo "<th colspan='2'>Schedule</th>";
+                    echo "</tr>";
+                    echo "<tr>";
+                    echo "<td>" . $key . "</td>";
+                    echo "<td>";
+                    foreach ($value as $item) {
+                        echo "<li>" . date('l', strtotime("Sunday +{$item} days")) . "</li>";
+                    }
+                    echo "</td>";
+                    echo "</tr>";
+                    $printedd = 1;
+                } else { // Cetak jam kerja
+                    echo "<tr>";
+                    echo "<td>" . $key . "</td>";
+                    echo "<td>";
+                    foreach ($value as $item) {
+                        echo "<li>" . $item . "</li>";
+                    }
+                    echo "</td>";
+                    echo "</tr>";
+                    echo "</table>";
+                    echo "</div>";
+                }
+            }
+            // Biodata dokter
+            elseif (is_object($value)) { // Biodata dokter
+                echo "<table>";
+                echo "<tr>";
+                echo "<th colspan='2'>Biodata</th>";
+                echo "</tr>";
+                foreach ($value as $property => $propertyValue) {
+                    echo "<tr>";
+                    echo "<td>" . $property . "</td>";
+                    echo "<td>" . $propertyValue . "</td>";
+                    echo "</tr>";
+                }
+                echo "</table>";
+                echo "</div>";
+            } else { // detail teknis
+                // Cetak table header sekali saja
+                if ($printed != 1) {
+                    echo "<div class='col-lg-4'>";
+                    echo "<table>";
+                    echo "<tr>";
+                    echo "<th colspan='2'>Technical data</th>";
+                    echo "</tr>";
+                    echo "<tr>";
+                    echo "<td>" . $key . "</td>";
+                    echo "<td>" . $value . "</td>";
+                    echo "</tr>";
+                    $printed = 1;
+                } else {
+                    echo "<tr>";
+                    echo "<td>" . $key . "</td>";
+                    echo "<td>" . $value . "</td>";
+                    echo "</tr>";
+                }
+                if ($key == 'spesialis') {
+                    echo "</table><br>"; //nutup table dan div col
+                }
+            }
+        }
+        echo "</div></div><br>";
     }
     ?>
 
