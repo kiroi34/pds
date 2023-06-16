@@ -11,7 +11,8 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="homeAdmin.css">
+  <link rel="stylesheet" href="inputDokter.css">
+  <link rel="stylesheet" href="fa_icons/css/all.css"> 
 
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
@@ -117,33 +118,68 @@
         <span class="dashboard">Dokter </span>
       </div>
     </nav>
-
+    
     <div class="home-content">
       <div class="overview-boxes">
-        <div class="isi">
-          <div class="right-side">
-            <h2>List Dokter</h2>
-            <table id="example" class="table table-striped" style="width:100%; text-align: center;">
-                <thead>
-                    <tr>
-                        <th>Queue Number</th>
-                        <th>Patient Name</th>
-                        <th>Gender</th>
-                        <th>Date Of Birth</th>
-                        <th>Tempat Lahir</th>
-                        <th>Phone Number</th>
-                        <th>Address</th>
-                        <th>ID Booking</th>
-                    </tr>
-                </thead>
-            
-          </div>
+        <div class="box">
+            <div class="box-topic"><a href="#" onclick="showInput()" style="color: #080710;">Input Data Dokter Baru</a></div>
+            <i class='bx bx-right-arrow-alt' href="#"></i>
         </div>
       </div>
-    </div>
+      
+
+
+      <div class="home-content">
+        <div class="isi" id="divInput" style="display:none">
+          
+            <form action="inputPendeta.php" method="post" onsubmit="return validateForm()" name="myForm" enctype="multipart/form-data">
+              <i class="fas fa-times" onclick="closeInput()" style="font-size:20px;color:red; float: right;"></i> 
+              <h2 style="padding-left:2px">Inputkan Data Dokter Baru</h2>
+              <br>
+                <label for="jabatan">Jabatan</label>
+                <select id="jabatan" name="jabatan" required>
+                  <option value="pilihan">--Pilih Jabatan--</option>
+                </select>
+
+                <label for="nama">Nama Lengkap Pengurus</label>
+                <input type="text" id="nama" name="nama" placeholder="Masukan Nama Pengurus..." required>
+            
+                <label for="biodata">Biodata</label>
+                <input type="textarea" id="biodata" name="biodata" placeholder="Biodata Pengurus..." required>
+
+                <br>
+                <br>
+                
+                <label for="foto">Upload Foto</label>
+                <br>
+                <input type="file" id="foto" name="foto">
+
+                <br>
+                <br>
+                <input type="submit" value="Submit" name="submit">
+              </form>
+        </div>
+</div>
+<br>
+<Br>
+<br>
+
+
+      
+  </section>
+
+   
 
   </section>
   <script>
+function showInput() {
+            document.getElementById("divInput").style.display = '';
+            }
+
+function closeInput() {
+            document.getElementById("divInput").style.display = 'none';
+            }
+
     let sidebar = document.querySelector(".sidebar");
     let sidebarBtn = document.querySelector(".sidebarBtn");
     sidebarBtn.onclick = function() {
