@@ -11,9 +11,9 @@
     session_start();
     ?>
     <style>
-        /* body {
-            background-color: #1b262c;
-        } */
+        body {
+            background-color: grey;
+        }
 
         h1,
         h2,
@@ -86,6 +86,7 @@
         echo "<a style='margin-left:10px' class='btn btn-danger' href='../pds_project/delete_doctor.php?dokter=" . $id_dokter[$counter] . "'>Delete</a>";
         echo "</div>";
         $counter++;
+        
         foreach ($decoded as $key => $value) {
             // Skip kalo id
             if ($key == '_id') {

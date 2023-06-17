@@ -2,77 +2,31 @@
 <html lang="en">
 
 <head>
-  <title>Admin</title>
+    <title>Biodata Pendeta</title>
 
-  <meta charset="UTF-8">
-  <link rel="stylesheet" href="style.css">
-  <!-- Boxicons CDN Link -->
-  <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="inputDokter.css">
-  <link rel="stylesheet" href="fa_icons/css/all.css"> 
-
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
-
-    .btn-fill {
-      width: 100%;
-      background-color: #41644A;
-      color: white;
-      padding: 15px 15px;
-      margin: 8px 0;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <!-- Boxicons CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="fa_icons/css/all.css"> 
+     <link rel="stylesheet" href="inputDokter.css"> 
+     <link rel="stylesheet" href="bootstrap.css"> 
+     
+     <style>
+     
+    .horizontal-container {
+        display: flex;
+        flex-direction: row;
     }
-
-    .btn-fill:hover {
-      --tw-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-      box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-    }
-
-    .isi {
-      background-color: #f2f2f2;
-      padding: 20px;
-      margin: auto;
-      display: flex;
-      align-items: center;
-      justify-content: flex-start;
-      width: 85%;
-      background: #fff;
-      border-radius: 12px;
-      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-    }
-
-    input[type=number],
-    select {
-      height: 30px;
-      width: 100%;
-      padding: 12px 20px;
-      margin: 8px 0;
-      display: inline-block;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      box-sizing: border-box;
-    }
-
-    input[type=text],
-    select {
-      height: 30px;
-      width: 100%;
-      padding: 12px 20px;
-      margin: 8px 0;
-      display: inline-block;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      box-sizing: border-box;
-    }
-  </style>
-
-
-</head>
+    .grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+  }
+     </style>
+    
+   </head>
 
 <body>
 <!-- navbar -->
@@ -134,25 +88,64 @@
           
             <form action="inputPendeta.php" method="post" onsubmit="return validateForm()" name="myForm" enctype="multipart/form-data">
               <i class="fas fa-times" onclick="closeInput()" style="font-size:20px;color:red; float: right;"></i> 
-              <h2 style="padding-left:2px">Inputkan Data Dokter Baru</h2>
+              <h1 style="padding-left:2px">Inputkan Data Dokter Baru</h1>
               <br>
-                <label for="jabatan">Jabatan</label>
+              <h2 style="padding-left:2px">Technical Detail</h2>
+              <label for="foto">Photo</label>
+                <input type="text" id="foto" name="foto" placeholder="Insert Doctor Photo..." required>
+
+                <label for="spesiality">Speciality</label>
+                <input type="text" id="spesiality" name="spesiality" placeholder="Insert Doctor Speciality..." required>
+              
+                <!-- <label for="jabatan">Jabatan</label>
                 <select id="jabatan" name="jabatan" required>
                   <option value="pilihan">--Pilih Jabatan--</option>
-                </select>
+                </select> -->
+                <br>
+                <h2 style="padding-left:2px">Biodata</h2>
 
-                <label for="nama">Nama Lengkap Pengurus</label>
-                <input type="text" id="nama" name="nama" placeholder="Masukan Nama Pengurus..." required>
+                <lah4bel for="nama">Name</label>
+                <input type="text" id="nama" name="nama" placeholder="Insert Doctor Name..." required>
             
-                <label for="biodata">Biodata</label>
-                <input type="textarea" id="biodata" name="biodata" placeholder="Biodata Pengurus..." required>
-
+                <label for="dob">Date Of Birth</label>
+                <br>
+                <input type="date" id="dob" name="dob" required>
                 <br>
                 <br>
+                <label for="email">Email</label>
+                <input type="textarea" id="email" name="email" placeholder="Insert Doctor email..." required>
                 
-                <label for="foto">Upload Foto</label>
+                <label for="alamat">Address</label>
+                <input type="textarea" id="alamat" name="alamat" placeholder="Insert Doctor Address..." required>
+                
+                <label for="phone">Phone Number</label>
+                <input type="textarea" id="phone" name="phone" placeholder="Insert Doctor Phone Number..." required>
                 <br>
-                <input type="file" id="foto" name="foto">
+                <h2 style="padding-left:2px">Schedule</h2>
+                 <!-- Hari -->
+                <h5>Available days</h5>
+                <input type="checkbox" id="sunday" name="days[]" value="0">
+                <label for="sunday">Sunday</label><br>
+                <input type="checkbox" id="monday" name="days[]" value="1">
+                <label for="monday">Monday</label><br>
+                <input type="checkbox" id="tuesday" name="days[]" value="2">
+                <label for="tuesday">Tuesday</label><br>
+                <input type="checkbox" id="wednesday" name="days[]" value="3">
+                <label for="wednesday">Wednesday</label><br>
+                <input type="checkbox" id="thursday" name="days[]" value="4">
+                <label for="thursday">Thursday</label><br>
+                <input type="checkbox" id="friday" name="days[]" value="5">
+                <label for="friday">Friday</label><br>
+                <input type="checkbox" id="saturday" name="days[]" value="6">
+                <label for="saturday">Saturday</label><br>
+
+                <!-- Jam -->
+                <h5>Available hours</h5>
+                <label for='start_time'>Start : </label>
+                <input type="time" id="start_time" name="start_time" required>
+                <label for='end_time'>End : </label>
+                <input type="time" id="end_time" name="end_time" required>
+                    
 
                 <br>
                 <br>
@@ -164,12 +157,122 @@
 <Br>
 <br>
 
+<section class="articles">
+<?php
+    $connectionString = "mongodb://localhost:27017";
+    $databaseName = "clinic";
+    $collectionName = "dokter";
 
-      
-  </section>
+    $manager = new MongoDB\Driver\Manager($connectionString);
 
-   
+    $query = new MongoDB\Driver\Query([]);
 
+    $database = $databaseName;
+    $collection = $collectionName;
+
+    $cursor = $manager->executeQuery("$database.$collection", $query);
+    $cursor2 = $manager->executeQuery("$database.$collection", $query);
+
+    $foto = [];
+    $id_dokter = [];
+    $printed = 0;
+    $printedd = 0;
+
+    // Ambil foto
+    foreach ($cursor as $document) {
+      $jsonString = json_encode($document); // Convert the document object to a JSON string
+      $decoded = json_decode($jsonString); // Decode the JSON string
+      foreach ($decoded as $key => $value) {
+          if ($key == 'foto') {
+              array_push($foto, $value);
+          }
+          if ($key == 'id_dokter') {
+              array_push($id_dokter, $value);
+          }
+      }
+  }
+  $counter = 0;
+  foreach ($cursor2 as $document)
+   { 
+    $printed = 0;
+    $printedd = 0;
+    $jsonString = json_encode($document); // Convert the document object to a JSON string
+    $decoded = json_decode($jsonString); // Decode the JSON string
+      // Mengakses properti dokumen
+      $iddokter = $document->id_dokter;
+      $riwayatregister = $document->registered;
+      $spesialis= $document->spesialis;
+      $biodata = $document->biodata;
+      $hari = $document->hari;
+      $jadwal= $document->jadwal;
+    ?>
+
+<article>
+        <div class="article-wrapper" style="margin-left:20px">
+
+          <?php echo "<img src='" . $foto[$counter] . "'>"; ?>
+          <br>
+          <br>
+          <div class="details">
+
+            <?php
+                  echo "<h3>" . $iddokter . "</h3>";
+
+                  echo "<h3>" . "Spesialisasi : " . $spesialis . "</h3>";
+
+                  foreach ($biodata as $key => $bo) {
+                    echo "<h3>" . $key . " : " . $bo . "<br>". "</h3>";;
+                  }
+                  echo "<br>";
+                  echo "<h3>" . "Schedule : " . "</h3>";
+
+                  echo "<div class='horizontal-container'>";
+                  foreach ($hari as  $hr) {
+                    echo "<h4>" . date('l', strtotime("Sunday +{$hr} days")) . ", ". "</h4>";
+                }               
+                  echo "</div>";
+                  echo "<br>";
+                  echo "<div class='grid-container'>";
+                  foreach ($jadwal as $jd) {
+                      echo "<h4>" . $jd .  "</h4>";;
+                  }
+                  echo "</div>";
+                  echo "<br>";
+                  echo "<h3>" . $riwayatregister . "</h3>";
+            ?>
+          </div>
+
+          <!-- <p id="info"><?php echo $data['biodata']; ?></p> -->
+          
+          <br>
+
+          
+          <div class="btn-group" style="width:100%">
+          <form action="#" method="post">
+            <input type = "hidden" name ="dapetinID" value="<?php echo $data['id']?>">
+            <button class="edit" value="update" name="update" style="width: 45%;" >Edit Biodata</button>
+          </form>
+     
+          <form action="#" method="post">
+            <input type = "hidden" name ="dapetinNama" value="<?php echo $data['nama']?>">
+            <button class="edit" value="delete" name="delete" style="width: 45%; background-color: #FF4136;">Delete</button>
+          </form>
+          </div>
+</div>
+  
+</article>
+
+    
+
+    
+
+<?php
+ $counter++;
+}
+?>
+  
+
+</section>
   </section>
   <script>
 function showInput() {
