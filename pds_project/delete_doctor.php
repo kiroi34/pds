@@ -15,8 +15,6 @@ $result = $manager->executeBulkWrite($collection, $bulkWrite);
 
 // Check if the delete operation was successful
 if ($result->getDeletedCount() > 0) {
-    header('location:doctors.php');
-} else {
-    echo "No document was deleted.";
+    header('location:adminpage_dokter.php');
 }
 ?>
