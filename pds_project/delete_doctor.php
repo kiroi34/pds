@@ -1,8 +1,6 @@
 <?php
 $manager = new MongoDB\Driver\Manager("mongodb://localhost:27017");
-
-// Step 2: Retrieve ID value from $_GET
-$id = $_GET['dokter']; // Assuming the ID is passed as a query parameter named 'dokter'
+$id = $_POST['dapetinNama'];
 
 // Step 3: Delete document from MongoDB
 $collection = 'clinic.dokter';

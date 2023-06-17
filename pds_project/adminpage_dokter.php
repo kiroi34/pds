@@ -248,20 +248,18 @@
                 ?>
               </div>
 
-              <!-- <p id="info"><?php echo $data['biodata']; ?></p> -->
-
               <br>
 
 
               <div class="btn-group" style="width:100%">
-                <form action="#" method="post">
-                  <input type="hidden" name="dapetinID" value="<?php echo $data['id'] ?>">
+                <form action="adminpage_edit_dokter.php" method="post">
+                  <input type="hidden" name="dapetinID" value="<?php echo $iddokter ?>">
                   <button class="edit" value="update" name="update" style="width: 45%;">Edit Biodata</button>
                 </form>
 
-                <form action="#" method="post">
-                  <input type="hidden" name="dapetinNama" value="<?php echo $data['nama'] ?>">
-                  <a type='button' class="button edit" value="delete" name="delete" style="width: 45%; background-color: #FF4136;" href='../pds_project/delete_doctor.php?dokter=<?php echo $id_dokter[$counter] ?>'>Delete</a>
+                <form action="delete_doctor.php" method="post">
+                  <input type="hidden" name="dapetinNama" value="<?php echo $iddokter ?>">
+                  <button class="edit" value="delete" name="delete" style="width: 45%; background-color: #FF4136;">Delete</button>
                 </form>
               </div>
             </div>
