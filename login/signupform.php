@@ -100,15 +100,14 @@
         <label for="nama">Full Name:</label>
         <input type="text" id="nama" name="nama" required><br>
 
-        <label for="umur">Age:</label>
-        <input type="date" id="umur" name="umur" required><br>
+        <label for="umur">Date of Birth:</label>
+        <input type="date" id="dob" name="dob" required><br>
 
         <label for="gender">Gender:</label>
-        <select name="gender" id="gender">
-            <option></option>
-            <option value="male" id="gender" name="gender" required>Male</option>
-            <option value="female" id="gender" name="gender" required>Female</option>
-        </select>
+
+            <input type="radio" id="gender" name="gender" value="male"><label for="male">Male</label>
+            <input type="radio" id="gender" name="gender" value="female"><label for="female">Female</label>
+    
         <br>
 
         <label for="alamat">Home Address:</label>

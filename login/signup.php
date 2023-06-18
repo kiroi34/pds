@@ -6,7 +6,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
 // Retrieve user input from the signup form
 $nama = $_POST['nama'];
-$umur = $_POST['umur'];
+$dob = $_POST['dob'];
 $gender = $_POST['gender'];
 $alamat = $_POST['alamat'];
 $contact = $_POST['contact'];
@@ -34,7 +34,7 @@ if ($result->num_rows > 0) {
 $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
 
 // Insert the new user into the database
-$query = "INSERT INTO login_table (nama, umur, gender, alamat, contact, username, password) VALUES ('$nama', '$umur', '$gender', '$alamat', '$contact', '$username', '$hashedPassword')";
+$query = "INSERT INTO login_table (nama, tanggal_lahir, gender, alamat, contact, username, password) VALUES ('$nama', '$dob', '$gender', '$alamat', '$contact', '$username', '$hashedPassword')";
 
 if ($mysqli->query($query)) {
     header('location:loginform.php');

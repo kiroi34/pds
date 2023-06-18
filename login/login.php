@@ -29,7 +29,7 @@ if ($result->num_rows === 1) {
     if (password_verify($password, $hashedPassword)) {
         // Password is correct, create a session
         $_SESSION['username'] = $username;
-        header("Location: ../pds/homepage/index.html"); // Redirect to the welcome page
+        header("Location: ../homepage/index.html"); // Redirect to the welcome page
         exit();
     }
 }

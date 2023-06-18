@@ -32,7 +32,7 @@
     <style>
         body {
             /* font-family: Arial, sans-serif; */
-            background-color: #CEEBED;
+            background-color: #F2E3DB;
         }
 
         h2 {
@@ -104,7 +104,8 @@
         <label for="password">Password:</label>
         <input type="password" id="password" name="password" required><br><br>
 
-        <input type="submit" value="Login" style="margin: 0 auto; display: block;">
+        <input type="submit" value="Login" style="margin: 0 auto; display: block; background-color: #41644A;">
+
 
         <h5>Doesn't have an account? </h5> <a href="adminsignupform.php" style="margin: 0 auto; display: block; font-weight: bold; font-size: 13px" >Click Here</a>
 
