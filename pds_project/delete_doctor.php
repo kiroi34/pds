@@ -1,8 +1,6 @@
 <?php
 $manager = new MongoDB\Driver\Manager("mongodb://localhost:27017");
-
-// Step 2: Retrieve ID value from $_GET
-$id = $_GET['dokter']; // Assuming the ID is passed as a query parameter named 'dokter'
+$id = $_POST['dapetinNama'];
 
 // Step 3: Delete document from MongoDB
 $collection = 'clinic.dokter';
@@ -15,8 +13,6 @@ $result = $manager->executeBulkWrite($collection, $bulkWrite);
 
 // Check if the delete operation was successful
 if ($result->getDeletedCount() > 0) {
-    header('location:doctors.php');
-} else {
-    echo "No document was deleted.";
+    header('location:adminpage_dokter.php');
 }
 ?>

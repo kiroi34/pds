@@ -4,6 +4,11 @@
 <head>
     <title>Insert New Doctor Data</title>
 
+    <style>
+      body{
+        background-color: grey;
+      }
+     </style>
 </head>
 
 <body>
