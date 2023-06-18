@@ -2,8 +2,9 @@
         "_id": "6489c5c02d6959be75f5fda8",
         "foto": "https://drive.google.com/uc?export=view&id=1dAEbPNhBnXC1wU16elJYHfIhPlirR-77",
         "id_dokter": "d0",
-        "registered": "2015-03-21T03:02:35 -07:00",
+        "registered": "2015-03-21",
         "spesialis": "umum",
+        "biaya": "75000",
         "biodata": {
             "name": "Cobb Melton",
             "gender": "male",
@@ -21,8 +22,9 @@
         "_id": "6489c5c048cea6b4b3937fad",
         "foto": "https://drive.google.com/uc?export=view&id=1dAEbPNhBnXC1wU16elJYHfIhPlirR-77",
         "id_dokter": "d1",
-        "registered": "2015-03-21T03:02:35 -07:00",
+        "registered": "2015-03-21",
         "spesialis": "anak",
+        "biaya": "110000",
         "biodata": {
             "name": "Delia Gray",
             "gender": "female",
@@ -38,12 +40,9 @@
         "_id": "6489c5c0caf1622a4ea20760",
         "foto": "https://drive.google.com/uc?export=view&id=1dAEbPNhBnXC1wU16elJYHfIhPlirR-77",
         "id_dokter": "d2",
-        "registered": "2015-03-21T03:02:35 -07:00",
+        "registered": "2015-03-21",
         "spesialis": "mata",
-        "hari": ["0", "1", "4", "6"],
-        "jadwal": ["09:00-09:30", "09:30-10:00", "10:00-10:30", "10:30-11:00", "11:00-11:30", "11:30-12:00",
-            "13.00-13.30", "13.30-14.00", "14.00-14.30", "14.30-15.00", "15.00-15.30", "15.30-16.00", "16.00-16.30", "16.30-17.00"
-        ],
+        "biaya": "125000",
         "biodata": {
             "name": "Sheppard Franco",
             "gender": "male",
@@ -51,15 +50,19 @@
             "email": "sheppardfranco@artworlds.com",
             "phone": "+1 (943) 500-2796",
             "address": "496 Oceanview Avenue, Stonybrook, Marshall Islands, 8922"
-        }
+        },
+        "hari": ["0", "1", "4", "6"],
+        "jadwal": ["09:00-09:30", "09:30-10:00", "10:00-10:30", "10:30-11:00", "11:00-11:30", "11:30-12:00",
+            "13.00-13.30", "13.30-14.00", "14.00-14.30", "14.30-15.00", "15.00-15.30", "15.30-16.00", "16.00-16.30", "16.30-17.00"
+        ]
     },
     {
         "_id": "6489c5c0e4c34cf12814d695",
         "foto": "https://drive.google.com/uc?export=view&id=1dAEbPNhBnXC1wU16elJYHfIhPlirR-77",
         "id_dokter": "d3",
-        "registered": "2015-03-21T03:02:35 -07:00",
+        "registered": "2015-03-21",
         "spesialis": "THT",
-        "hari": ["1", "2", "3", "5"],
+        "biaya": "115000",
         "biodata": {
             "name": "Farrell Wiley",
             "gender": "male",
@@ -68,14 +71,16 @@
             "phone": "+1 (988) 570-2171",
             "address": "933 Sutter Avenue, Ryderwood, New Hampshire, 6511"
         },
+        "hari": ["1", "2", "3", "5"],
         "jadwal": ["08:00-08:30", "08:30-09:00", "09:00-09:30", "09:30-10:00", "10:00-10:30", "10:30-11:00", "11:00-11:30", "11:30-12:00", "14.00-14.30", "14.30-15.00", "15.00-15.30", "15.30-16.00", "16.00-16.30", "16.30-17.00", "17.00-17.30", "17.30-18.00"]
     },
     {
         "_id": "6489c5c0460be9baec19ce4f",
         "foto": "https://drive.google.com/uc?export=view&id=1dAEbPNhBnXC1wU16elJYHfIhPlirR-77",
         "id_dokter": "d4",
-        "registered": "2015-03-21T03:02:35 -07:00",
+        "registered": "2015-03-21",
         "spesialis": "anak",
+        "biaya": "100000",
         "biodata": {
             "name": "Susanne Oneill",
             "gender": "female",
@@ -93,8 +98,9 @@
         "_id": "6489c5c0fadb2dc166c55aa6",
         "foto": "https://drive.google.com/uc?export=view&id=1dAEbPNhBnXC1wU16elJYHfIhPlirR-77",
         "id_dokter": "d5",
-        "registered": "2015-03-21T03:02:35 -07:00",
+        "registered": "2015-03-21",
         "spesialis": "umum",
+        "biaya": "85000",
         "biodata": {
             "name": "Brittany Sanchez",
             "gender": "female",
@@ -112,8 +118,9 @@
         "_id": "6489c5c00df944bf1225d21c",
         "foto": "https://drive.google.com/uc?export=view&id=1dAEbPNhBnXC1wU16elJYHfIhPlirR-77",
         "id_dokter": "d6",
-        "registered": "2015-03-21T03:02:35 -07:00",
+        "registered": "2015-03-21",
         "spesialis": "anak",
+        "biaya": "105000",
         "biodata": {
             "name": "Alison Mosley",
             "gender": "female",
@@ -129,8 +136,9 @@
         "_id": "6489c5c0e979e30b6cceae86",
         "foto": "https://drive.google.com/uc?export=view&id=1dAEbPNhBnXC1wU16elJYHfIhPlirR-77",
         "id_dokter": "d7",
-        "registered": "2015-03-21T03:02:35 -07:00",
+        "registered": "2015-03-21",
         "spesialis": "gigi",
+        "biaya": "125000",
         "biodata": {
             "name": "Frost Noel",
             "gender": "male",
@@ -148,8 +156,9 @@
         "_id": "6489c5c0b94af6325d7af11a",
         "foto": "https://drive.google.com/uc?export=view&id=1dAEbPNhBnXC1wU16elJYHfIhPlirR-77",
         "id_dokter": "d8",
-        "registered": "2015-03-21T03:02:35 -07:00",
+        "registered": "2015-03-21",
         "spesialis": "THT",
+        "biaya": "140000",
         "biodata": {
             "name": "Pearl Welch",
             "gender": "female",
@@ -165,8 +174,9 @@
         "_id": "6489c5c0e722865200d6b23b",
         "foto": "https://drive.google.com/uc?export=view&id=1dAEbPNhBnXC1wU16elJYHfIhPlirR-77",
         "id_dokter": "d9",
-        "registered": "2015-03-21T03:02:35 -07:00",
+        "registered": "2016-04-02",
         "spesialis": "gigi",
+        "biaya": "130000",
         "biodata": {
             "name": "John Hodges",
             "gender": "female",
