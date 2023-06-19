@@ -73,45 +73,48 @@
       </div>
     </nav>
 
-
-
-
     <?php
-        $connectionString = "mongodb://localhost:27017";
-        $databaseName = "clinic";
-        $collectionName = "dokter";
-        $iddokter = $_POST['dapetinID'];
-        $filter = ['id_dokter' => $iddokter];
+    $connectionString = "mongodb://localhost:27017";
+    $databaseName = "clinic";
+    $collectionName = "dokter";
+    $iddokter = $_POST['dapetinID'];
+    $filter = ['id_dokter' => $iddokter];
 
-        $manager = new MongoDB\Driver\Manager($connectionString);
+    $manager = new MongoDB\Driver\Manager($connectionString);
 
-        $query = new MongoDB\Driver\Query($filter);
+    $query = new MongoDB\Driver\Query($filter);
 
-        $database = $databaseName;
-        $collection = $collectionName;
+    $database = $databaseName;
+    $collection = $collectionName;
 
-        $cursor = $manager->executeQuery("$database.$collection", $query);
-        $cursor2 = $manager->executeQuery("$database.$collection", $query);
+    $cursor = $manager->executeQuery("$database.$collection", $query);
+    $cursor2 = $manager->executeQuery("$database.$collection", $query);
 
-        $counter = 0;
-        foreach ($cursor2 as $document) {
-          $printed = 0;
-          $printedd = 0;
-          $jsonString = json_encode($document); // Convert the document object to a JSON string
-          $decoded = json_decode($jsonString); // Decode the JSON string
-          // Mengakses properti dokumen
-          $iddokter = $document->id_dokter;
-          $riwayatregister = $document->registered;
-          $spesialis = $document->spesialis;
-          $biodata = $document->biodata;
-          $hari = $document->hari;
-        //   $jadwal = $document->jadwal;
-         
-        ?>
+    $counter = 0;
+    foreach ($cursor2 as $document) {
+      $printed = 0;
+      $printedd = 0;
+      $jsonString = json_encode($document); // Convert the document object to a JSON string
+      $decoded = json_decode($jsonString); // Decode the JSON string
+      // Mengakses properti dokumen
+      $foto = $document->foto;
+      $iddokter = $document->id_dokter;
+      $riwayatregister = $document->registered;
+      $spesialis = $document->spesialis;
+      $biodata = $document->biodata;
+      $hari = $document->hari;
+      $jadwal = $document->jadwal;
+
+      $jadwalcontainer = [];
+      foreach ($jadwal as $value) {
+        array_push($jadwalcontainer, $value);
+      }
+
+    ?>
 
 
       <div class="home-content">
-        <div class="isi" id="divInput" >
+        <div class="isi" id="divInput">
 
           <form action="process_edit_doctor.php" method="post" onsubmit="return validateForm()" name="myForm" enctype="multipart/form-data">
             <h1 style="padding-left:2px">Update Data Dokter Baru</h1>
@@ -119,32 +122,32 @@
             <input type="text" id="iddok" name="iddok" value="<?php echo $iddokter; ?>" readonly>
             <br>
             <h2 style="padding-left:2px">Technical Detail</h2>
-            <!-- <label for="foto">Photo</label>
-            <input type="text" id="foto" name="foto" placeholder="Insert Doctor Photo..." required> -->
+            <label for="foto">Photo</label>
+            <input type="text" id="foto" name="foto" placeholder="Insert Doctor Photo..." value="<?php echo $foto; ?>" required>
 
             <label for="specialization">Specialization</label>
             <input type="text" id="specialization" name="specialization" value="<?php echo $spesialis; ?>" required>
 
             <br>
             <h2 style="padding-left:2px">Biodata</h2>
-            
 
-
-
-            
             <label for="nama">Name</label>
-            <input type="text" id="nama" name="nama"   value="<?php echo $biodata->name; ?>" required>
+            <input type="text" id="nama" name="nama" value="<?php echo $biodata->name; ?>" required>
 
             <label>Gender</label><br>
-            <input type="radio" id="male" name="gender" value="male" <?php if($biodata->gender=="male"){echo " checked='checked'";}?>>
+            <input type="radio" id="male" name="gender" value="male" <?php if ($biodata->gender == "male") {
+                                                                        echo " checked='checked'";
+                                                                      } ?>>
             <label for="male">Male</label>
-            <input type="radio" id="female" name="gender" value="female" <?php if($biodata->gender=="female"){echo " checked='checked'";}?> >
+            <input type="radio" id="female" name="gender" value="female" <?php if ($biodata->gender == "female") {
+                                                                            echo " checked='checked'";
+                                                                          } ?>>
             <label for="female">Female</label><br>
             <br>
 
             <label for="dob">Date Of Birth</label>
             <br>
-            <input type="date" id="dob" name="dob" value="<?php echo date("Y-m-d",strtotime($biodata->DOB)); ?>" required>
+            <input type="date" id="dob" name="dob" value="<?php echo date("Y-m-d", strtotime($biodata->DOB)); ?>" required>
             <br>
             <br>
             <label for="email">Email</label>
@@ -159,9 +162,9 @@
             <h2 style="padding-left:2px">Schedule</h2>
             <!-- Hari -->
             <h5>Available days</h5>
-            <input type="checkbox" id="day0" name="days[]" value="0" >
+            <input type="checkbox" id="day0" name="days[]" value="0">
             <label for="sunday">Sunday</label><br>
-            <input type="checkbox" id="day1" name="days[]" value="1" >
+            <input type="checkbox" id="day1" name="days[]" value="1">
             <label for="monday">Monday</label><br>
             <input type="checkbox" id="day2" name="days[]" value="2">
             <label for="tuesday">Tuesday</label><br>
@@ -175,11 +178,11 @@
             <label for="saturday">Saturday</label><br>
 
             <!-- Jam -->
-            <!-- <h5>Available hours</h5>
+            <h5>Available hours</h5>
             <label for='start_time'>Start : </label>
-            <input type="time" id="start_time" name="start_time" required>
+            <input type="time" id="start_time" name="start_time" value='<?php echo $jadwalcontainer[0] ?>' required>
             <label for='end_time'>End : </label>
-            <input type="time" id="end_time" name="end_time" required> -->
+            <input type="time" id="end_time" name="end_time" value='<?php echo $jadwalcontainer[1] ?>' required>
 
 
             <br>
@@ -192,17 +195,16 @@
       <Br>
       <br>
 
-      <?php
-          $counter++;
-          foreach($hari as $value){
-            echo "<script> document.getElementById('day" . $value . "').checked = true;</script>";
-          }
-        }
-        ?>
+    <?php
+      $counter++;
+      foreach ($hari as $value) {
+        echo "<script> document.getElementById('day" . $value . "').checked = true;</script>";
+      }
+
+    }
+    ?>
   </section>
   <script>
-
-
     let sidebar = document.querySelector(".sidebar");
     let sidebarBtn = document.querySelector(".sidebarBtn");
     sidebarBtn.onclick = function() {

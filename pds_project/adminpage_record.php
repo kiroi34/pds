@@ -89,7 +89,7 @@
     <li>
         <a href="adminpage.php">
           <i class='bx bx-home-alt'></i>
-          <span class="links_name" style="color: #F2E3DB; font-size:18px">List Booking</span>
+          <span class="links_name" style="color: #F2E3DB; font-size:18px">Booking List</span>
         </a>
       </li>
       <li>
@@ -101,13 +101,25 @@
       <li>
         <a href="adminpage_record.php" class="active">
           <i class='bx bx-home-alt'></i>
-          <span class="links_name" style="color: #F2E3DB; font-size:18px">Record Pasien</span>
+          <span class="links_name" style="color: #F2E3DB; font-size:18px">Patient Records</span>
         </a>
       </li>
       <li>
-        <a href="adminpage_transaksi.php"  >
+        <a href="adminpage_transaksi.php">
           <i class='bx bx-home-alt'></i>
-          <span class="links_name" style="color: #F2E3DB; font-size:18px">Transaksi</span>
+          <span class="links_name" style="color: #F2E3DB; font-size:18px">Transaction</span>
+        </a>
+      </li>
+      <li>
+        <a href="adminpage_medicine.php">
+          <i class='bx bx-home-alt'></i>
+          <span class="links_name" style="color: #F2E3DB; font-size:18px">Medicine</span>
+        </a>
+      </li>
+      <li>
+        <a href="adminpage_kasir.php">
+          <i class='bx bx-home-alt'></i>
+          <span class="links_name" style="color: #F2E3DB; font-size:18px">Cashier</span>
         </a>
       </li>
     </ul>

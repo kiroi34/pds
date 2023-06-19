@@ -40,25 +40,37 @@
       <li>
         <a href="adminpage.php">
           <i class='bx bx-home-alt'></i>
-          <span class="links_name" style="color: #F2E3DB; font-size:18px">List Booking</span>
+          <span class="links_name" style="color: #F2E3DB; font-size:18px">Booking List</span>
         </a>
       </li>
       <li>
         <a href="adminpage_dokter.php" class="active">
           <i class='bx bx-home-alt'></i>
-          <span class="links_name" style="color: #F2E3DB; font-size:18px">Dokter</span>
+          <span class="links_name" style="color: #F2E3DB; font-size:18px">Doctor</span>
         </a>
       </li>
       <li>
         <a href="adminpage_record.php">
           <i class='bx bx-home-alt'></i>
-          <span class="links_name" style="color: #F2E3DB; font-size:18px">Record Pasien</span>
+          <span class="links_name" style="color: #F2E3DB; font-size:18px">Patient Records</span>
         </a>
       </li>
       <li>
         <a href="adminpage_transaksi.php">
           <i class='bx bx-home-alt'></i>
-          <span class="links_name" style="color: #F2E3DB; font-size:18px">Transaksi</span>
+          <span class="links_name" style="color: #F2E3DB; font-size:18px">Transaction</span>
+        </a>
+      </li>
+      <li>
+        <a href="adminpage_medicine.php">
+          <i class='bx bx-home-alt'></i>
+          <span class="links_name" style="color: #F2E3DB; font-size:18px">Medicine</span>
+        </a>
+      </li>
+      <li>
+        <a href="adminpage_kasir.php">
+          <i class='bx bx-home-alt'></i>
+          <span class="links_name" style="color: #F2E3DB; font-size:18px">Cashier</span>
         </a>
       </li>
     </ul>
@@ -88,7 +100,7 @@
 
           <form action="process_insert_doctor.php" method="post" onsubmit="return validateForm()" name="myForm" enctype="multipart/form-data">
             <i class="fas fa-times" onclick="closeInput()" style="font-size:20px;color:red; float: right;"></i>
-            <h1 style="padding-left:2px">Inputkan Data Dokter Baru</h1>
+            <h1 style="padding-left:2px">Inpsert new doctor data</h1>
             <br>
             <h2 style="padding-left:2px">Technical Detail</h2>
             <label for="foto">Photo</label>
@@ -222,9 +234,10 @@
               <div class="details">
 
                 <?php
-                echo "<h3>" . $iddokter . "</h3>";
+                echo "<h3>ID : " . $iddokter . "</h3>";
+                echo "<h3>Registered : " . $riwayatregister . "</h3>";
 
-                echo "<h3>" . "Spesialisasi : " . $spesialis . "</h3>";
+                echo "<h3>" . "Specialization : " . $spesialis . "</h3><br>";
 
                 foreach ($biodata as $key => $bo) {
                   echo "<h3>" . $key . " : " . $bo . "<br>" . "</h3>";;
@@ -233,18 +246,31 @@
                 echo "<h3>" . "Schedule : " . "</h3>";
 
                 echo "<div class='horizontal-container'>";
+                $check = count($hari);
+                $checkk = 1;
                 foreach ($hari as  $hr) {
-                  echo "<h4>" . date('l', strtotime("Sunday +{$hr} days")) . ", " . "</h4>";
+                  if ($checkk < $check) {
+                    echo "<h4>" . date('l', strtotime("Sunday +{$hr} days")) . ",  " . "</h4>";
+                  } else {
+                    echo "<h4>" . date('l', strtotime("Sunday +{$hr} days")) . "</h4>";
+                  }
+                  $checkk++;
                 }
                 echo "</div>";
                 echo "<br>";
                 echo "<div class='grid-container'>";
+                $countt = 0;
                 foreach ($jadwal as $jd) {
-                  echo "<h4>" . $jd .  "</h4>";;
+                  if ($countt == 0) {
+                    echo "<h4>Start shift : " . $jd .  "</h4>";
+                  } elseif ($countt == 1) {
+                    echo "<h4>End shift : " . $jd .  "</h4>";
+                  }
+                  $countt++;
                 }
                 echo "</div>";
                 echo "<br>";
-                echo "<h3>" . $riwayatregister . "</h3>";
+
                 ?>
               </div>
 

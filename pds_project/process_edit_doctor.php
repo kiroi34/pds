@@ -4,6 +4,7 @@ if (isset($_POST['submit'])) {
     $databaseName = "clinic";
     $collectionName = "dokter";
     $iddokter = $_POST['iddok'];
+    $foto = $_POST['foto'];
     $spesialis = $_POST['specialization'];
     $nama = $_POST['nama'];
     $gender = $_POST['gender'];
@@ -12,7 +13,12 @@ if (isset($_POST['submit'])) {
     $alamat = $_POST['alamat'];
     $phone = $_POST['phone'];
     $days = isset($_POST['days']) ? $_POST['days'] : array();
-  
+    $starttime = $_POST['start_time'];
+    $endtime = $_POST['end_time'];
+
+    $arrayjam = [];
+    array_push($arrayjam, $starttime);
+    array_push($arrayjam, $endtime);
 
     $manager = new MongoDB\Driver\Manager($connectionString);
 
@@ -20,6 +26,7 @@ if (isset($_POST['submit'])) {
     $filter = ['id_dokter' => $iddokter];
     $update = [
         '$set' => [
+            'foto' => $foto,
             'spesialis' => $spesialis,
             'biodata.name' => $nama,
             'biodata.gender' => $gender,
@@ -27,7 +34,8 @@ if (isset($_POST['submit'])) {
             'biodata.email' => $email,
             'biodata.address' => $alamat,
             'biodata.phone' => $phone,
-            'hari' => $days
+            'hari' => $days,
+            'jadwal' => $arrayjam
         ]
     ];
     $options = ['multi' => false, 'upsert' => false];
