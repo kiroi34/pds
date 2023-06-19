@@ -7,6 +7,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 // Retrieve user input from the form
 $username = $_POST['username'];
 $password = $_POST['password'];
+$_SESSION['username'] = $username;
+
 
 
 
