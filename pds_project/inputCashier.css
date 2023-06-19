@@ -295,10 +295,21 @@
               }
 
               .edit {
-                width: 100%;
+                width: 25%;
                 background-color: #847d7d;
                 color: white;
-                padding: 14px 20px;
+                padding: 7px 20px;
+                margin: 8px 0;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+              }
+
+              .remove {
+                width: 25%;
+                background-color: #FF4136;
+                color: white;
+                padding: 7px 20px;
                 margin: 8px 0;
                 border: none;
                 border-radius: 4px;

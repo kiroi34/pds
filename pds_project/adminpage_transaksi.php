@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="homeAdmin.css">
+  <link rel="stylesheet" href="inputCashier.css">
 
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
@@ -67,7 +67,12 @@
       border: 1px solid #ccc;
       border-radius: 4px;
       box-sizing: border-box;
+
+      
     }
+
+
+    
   </style>
   <script>
     

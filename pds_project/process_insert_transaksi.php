@@ -146,5 +146,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $manager->executeCommand('clinic', $command);
 
     // Redirect or display success message
-    header('location:adminpage_kasir.php');
+    echo "<script>alert('Insert Data Transaksi Telah Berhasil!'); window.location.href = 'adminpage_kasir.php';</script>";
+   
 }

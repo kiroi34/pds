@@ -109,10 +109,6 @@
             <label for="specialization">Specialization</label>
             <input type="text" id="specialization" name="specialization" placeholder="Insert Doctor Specialization..." required>
 
-            <!-- <label for="jabatan">Jabatan</label>
-                <select id="jabatan" name="jabatan" required>
-                  <option value="pilihan">--Pilih Jabatan--</option>
-                </select> -->
             <br>
             <h2 style="padding-left:2px">Biodata</h2>
 

@@ -23,7 +23,7 @@
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="fa_icons/css/all.css">
-    <link rel="stylesheet" href="inputDokter.css">
+    <link rel="stylesheet" href="inputCashier.css">
     <link rel="stylesheet" href="bootstrap.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
@@ -45,7 +45,7 @@
             var addButton = $("#add_field_button"); // Add button ID
 
             var fieldHTML =
-                '<div class="input-wrapper"><input type="text" name="medicine[]" class="form-control mt-2 user" placeholder="Enter medicine name.." /><input min=1 type="number" name="amount[]" class="form-control mt-2 amount" placeholder="Enter amount.." /><div class="medicinelist"></div><button class="remove_field">Remove</button></div>'; // New input field HTML
+                '<div class="input-wrapper"><input type="text" name="medicine[]" class="form-control mt-2 user" placeholder="Enter medicine name.." /><input min=1 type="number" name="amount[]" class="form-control mt-2 amount" placeholder="Enter amount.." /><div class="medicinelist"></div><button class="remove">Remove</button></div>'; // New input field HTML
 
             // Triggered when "Add Field" button is clicked
             $(addButton).click(function(e) {
@@ -92,8 +92,70 @@
 </head>
 
 <body>
-    <form method="post" onsubmit="return validateForm()" name="myForm" enctype="multipart/form-data">
-        <i class="fas fa-times" onclick="closeInput()" style="font-size:20px;color:red; float: right;"></i>
+      <!-- navbar -->
+  <div class="sidebar" style="width:100%">
+    <div class="logo-details">
+      <i class='bx bx-user'></i>
+      <br>
+      <span class="logo_name"><b>Admin</b><br>XYZ CLINIC</span>
+    </div>
+    <ul class="nav-links">
+      <li>
+        <a href="adminpage.php">
+          <i class='bx bx-home-alt'></i>
+          <span class="links_name" style="color: #F2E3DB; font-size:18px">Booking List</span>
+        </a>
+      </li>
+      <li>
+        <a href="adminpage_dokter.php">
+          <i class='bx bx-home-alt'></i>
+          <span class="links_name" style="color: #F2E3DB; font-size:18px">Doctor</span>
+        </a>
+      </li>
+      <li>
+        <a href="adminpage_record.php">
+          <i class='bx bx-home-alt'></i>
+          <span class="links_name" style="color: #F2E3DB; font-size:18px">Patient Records</span>
+        </a>
+      </li>
+      <li>
+        <a href="adminpage_transaksi.php">
+          <i class='bx bx-home-alt'></i>
+          <span class="links_name" style="color: #F2E3DB; font-size:18px">Transaction</span>
+        </a>
+      </li>
+      <li>
+        <a href="adminpage_medicine.php">
+          <i class='bx bx-home-alt'></i>
+          <span class="links_name" style="color: #F2E3DB; font-size:18px">Medicine</span>
+        </a>
+      </li>
+      <li>
+        <a href="adminpage_kasir.php" class="active">
+          <i class='bx bx-home-alt'></i>
+          <span class="links_name" style="color: #F2E3DB; font-size:18px">Cashier</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <!-- home -->
+  <section class="home-section">
+    <nav>
+      <div class="sidebar-button">
+        <i class='bx bx-menu sidebarBtn'></i>
+        <span class="dashboard">Dokter </span>
+      </div>
+    </nav>
+
+    <div class="home-content">
+     
+
+      <div class="home-content">
+        <div class="isi" id="divInput" >
+
+        <form method="post" onsubmit="return validateForm()" name="myForm" enctype="multipart/form-data">
+     
         <h1 style="padding-left:2px">Insert payment</h1>
         <br>
         <h2 style="padding-left:2px">Input Bill Details</h2>
@@ -115,7 +177,7 @@
 
             </div>
         </div>
-        <button id="add_field_button">Add Field</button>
+        <button class="edit" id="add_field_button">Add Field</button>
 
         <!-- Status pembayaran -->
         <br><br><label>Payment Status</label><br>
@@ -128,6 +190,11 @@
         <br>
         <input type="submit" value="Submit" name="submit">
     </form>
+    </div>
+      </div>
+      <br>
+      <Br>
+      <br>
 
     <?php
     if (isset($_POST['submit'])) {
@@ -194,31 +261,43 @@
         } else {
             echo '<script type="text/javascript"> window.onload = function () { alert("No medicine found with that name"); } </script>';
         }
+        echo "<div class='home-content'>";
+        echo "<div class='isi' id='divInput'>";
+        echo "<form action='process_insert_transaksi.php' method='post' name='myForm' enctype='multipart/form-data'>";
         echo "<h1>Bill Summary</h1>";
-        echo "<form action='process_insert_transaksi.php' method='post'>";
         // Tanggal transaksi
-        echo "<h6>Transaction date</h6>";
+        echo "<h3>Transaction date</h3>";
         $currentDateTime = date('d-m-Y H:i:s');
         echo '<input type="text" name="transaction_date" class="form-control mt-2 user" value="' . $currentDateTime . '"/>';
         // ID Pasien
-        echo "<h6>Patient ID</h6>";
+        echo "<h3>Patient ID</h3>";
         echo '<input type="text" name="patient_id" class="form-control mt-2 user" value="' . $_POST['id_pasien'] . '"/>';
         // ID Dokter
-        echo "<h6>Doctor ID</h6>";
+        echo "<h3>Doctor ID</h3>";
         echo '<input type="text" name="doctor_id" class="form-control mt-2 user" value="' . $_POST['id_dokter'] . '"/>';
         // List obat
-        echo "<h6>Medicine list</h6>";
+        echo "<h3>Medicine list</h3>";
         for ($i = 0; $i < count($listmedicine); $i++) {
             echo '<input type="text" name="medicines[]" class="form-control mt-2 user" value="' . $listmedicine[$i] . '"/>';
             echo '<input type="text" name="amount[]" class="form-control mt-2 user" value="' . $listamount[$i] . '"/>';
         }
         // Status pembayaran
-        echo '<h6>Payment Status</h6>';
+        echo '<h3>Payment Status</h3>';
         echo '<input type="text" name="payment" class="form-control mt-2 user" value="' . $_POST['payment'] . '"/>';
         echo '<input type="submit" value="Confirm" name="submit">';
         echo '</form>';
     }
     ?>
+
+    <script>
+          function showInput() {
+      document.getElementById("divInput").style.display = '';
+    }
+
+    function closeInput() {
+      document.getElementById("divInput").style.display = 'none';
+    }
+        </script>
 </body>
 
 </html>
