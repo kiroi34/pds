@@ -25,7 +25,8 @@ $query = "SELECT * FROM login_table WHERE username = '$username'";
 $result = $mysqli->query($query);
 
 if ($result->num_rows > 0) {
-    echo "Username already exists. Please choose a different username.";
+    echo "<script>alert('Username Taken'); window.location.href = 'signupform.php';</script>";
+    // header('location:signupform.php');
     $mysqli->close();
     exit();
 }
@@ -37,10 +38,7 @@ $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
 $query = "INSERT INTO login_table (nama, tanggal_lahir, gender, alamat, contact, username, password) VALUES ('$nama', '$dob', '$gender', '$alamat', '$contact', '$username', '$hashedPassword')";
 
 if ($mysqli->query($query)) {
-    header('location:loginform.php');
-    echo "<div class='alert alert-success'>
-    <strong>Success!</strong> Your account has been created
-  </div>";
+    echo "<script>alert('Account Created'); window.location.href = 'loginform.php';</script>";
 } else {
     echo "Error: " . $query . "<br>" . $mysqli->$error;
 }

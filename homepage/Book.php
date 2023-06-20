@@ -68,14 +68,14 @@
 <body>
    <!-- header section start -->
    <div class="header_section">
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+   <nav class="navbar navbar-expand-lg navbar-light bg-light">
          <div class="logo"><a href="index.html"><img src="images/logo.png"></a></div>
          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
          </button>
          <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
-               <li class="nav-item ">
+               <li class="nav-item active">
                   <a class="nav-link" href="index.html">Home</a>
                </li>
                <li class="nav-item">
@@ -84,11 +84,23 @@
                <li class="nav-item">
                   <a class="nav-link" href="Speciality.html">Speciality</a>
                </li>
-               <li class="nav-item active ">
+               <li class="nav-item">
                   <a class="nav-link" href="Book.php">Book</a>
                </li>
                <li class="nav-item">
-                  <a class="nav-link" href="#"><img src="images/search-icon.png"></a>
+                  <a class="nav-link" ></a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" ></a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" ></a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" ></a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" href="../pds_project/profile.php">My Profile</a>
                </li>
             </ul>
          </div>
@@ -266,7 +278,7 @@
                <div class="Useful_text">There are many variations of passages of Lorem Ipsum available, but the majority have suffered ,</div>
             </div>
             <div class="col-lg-3 col-sm-6">
-
+               
                <div class="social_icon">
                   <ul>
                      <li><a href="#"><img src="images/fb-icon.png"></a></li>

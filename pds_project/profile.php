@@ -5,7 +5,7 @@ session_start();
 
 // Check if the user is logged in
 if (!isset($_SESSION['username'])) {
-    header('Location: login.php');
+    header('Location: ../login/loginform.php');
     exit();
 }
 
@@ -22,6 +22,7 @@ if ($result->num_rows > 0) {
     $alamat = $row['alamat'];
     $contact = $row['contact'];
 } else {
+    header('Location: ../login/loginform.php');
     echo "User profile not found.";
     exit();
 }
@@ -62,8 +63,7 @@ $mysqli->close();
 ?>
 
 <head>
-    <!-- rest of your HTML head content -->
-    <meta charset="utf-8">
+<meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <!-- mobile metas -->
       <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -89,7 +89,7 @@ $mysqli->close();
       <link rel="stylesheet" href="css/owl.carousel.min.css">
       <link rel="stylesheet" href="css/owl.theme.default.min.css">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
-   
+     
     <style>
         body {
             /* font-family: Arial, sans-serif; */
@@ -167,38 +167,61 @@ $mysqli->close();
 </head>
 
 <body>
-    <h2>Edit Profile</h2>
-    <form action="profile_edit.php" method="POST">
-        <label for="nama">Fullname:</label>
-        <input type="text" id="nama" name="nama" value="<?php echo $nama; ?>" disabled><br>
+<div class="container">
+  <h2>My Profile</h2>
+  <form action="profile_edit.php" method="POST">
+    <label for="nama">Fullname:</label>
+    <input type="text" id="nama" name="nama" value="<?php echo $nama; ?>" disabled><br>
 
-        <label for="dob">Date of Birth:</label>
-        <input type="text" id="dob" name="dob" value="<?php echo $dob; ?>" disabled><br>
+    <label for="dob">Date of Birth:</label>
+    <input type="text" id="dob" name="dob" value="<?php echo $dob; ?>" disabled><br>
 
-        <label for="gender">Gender:</label>
-        <input type="text" id="gender" name="gender" value="<?php echo $gender; ?>" disabled><br>
+    <label for="gender">Gender:</label>
+    <input type="text" id="gender" name="gender" value="<?php echo $gender; ?>" disabled><br>
 
-        <label for="alamat">Home Address:</label>
-        <input type="text" id="alamat" name="alamat" value="<?php echo $alamat; ?>" required><br>
+    <label for="alamat">Home Address:</label>
+    <input type="text" id="alamat" name="alamat" value="<?php echo $alamat; ?>" disabled><br>
 
-        <label for="contact">Contact Number:</label>
-        <input type="text" id="contact" name="contact" value="<?php echo $contact; ?>" required><br>
+    <label for="contact">Contact Number:</label>
+    <input type="text" id="contact" name="contact" value="<?php echo $contact; ?>" disabled><br>
 
-        <label for="password">New Password:</label>
-        <input type="password" id="password" name="password" required><br>
+    <button type="button" class="btn btn-danger" style="background-color: black" onclick="window.location.href='../homepage/index.html'">Back</button>
+    <button type="button" class="btn btn-danger" style="background-color: #4BC5B8" onclick="window.location.href='profile_edit.php'">Edit My Profile</button>
+    <button type="button" class="btn btn-danger" style="background-color: #4BC5B8" onclick="logout()">Log Out</button>
+    <br>
+    <script>
+      function logout() {
+        // Make an AJAX request to the logout.php script
+        var xhr = new XMLHttpRequest();
+        xhr.open("GET", "logout.php", true);
+        xhr.onreadystatechange = function () {
+          if (xhr.readyState === 4 && xhr.status === 200) {
+            // Redirect to the desired page after successful logout
+            window.location.href = "../homepage/index.html";
+          }
+        };
+        xhr.send();
+      }
+    </script>
+  </form>
+  <br>
+  <br>
+  <br>
+</div>
 
-        <button type="button" class="btn btn-danger" style="background-color: black" onclick="window.location.href='profile.php'">Cancel</button>
-
-        <input type="submit" style="background-color: #4BC5B8" value="Confirm" onclick="showAlert()">
-
-        <script>
-        function showAlert() {
-            alert("Profile Updated");
-        }
-        </script>
-
-    </form>
     <!-- rest of your HTML body content -->
+    <!-- Javascript files-->
+    <script src="js/jquery.min.js"></script>
+      <script src="js/popper.min.js"></script>
+      <script src="js/bootstrap.bundle.min.js"></script>
+      <script src="js/jquery-3.0.0.min.js"></script>
+      <script src="js/plugin.js"></script>
+      <!-- sidebar -->
+      <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+      <script src="js/custom.js"></script>
+      <!-- javascript --> 
+      <script src="js/owl.carousel.js"></script>
+      <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
 </body>
 
 </html>

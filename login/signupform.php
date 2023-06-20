@@ -95,6 +95,7 @@
     </style>
 </head>
 <body>
+    <div class="container">
     <h2>Sign Up</h2>
     <form action="signup.php" method="POST">
         <label for="nama">Full Name:</label>
@@ -105,8 +106,8 @@
 
         <label for="gender">Gender:</label>
 
-            <input type="radio" id="gender" name="gender" value="male"><label for="male">Male</label>
-            <input type="radio" id="gender" name="gender" value="female"><label for="female">Female</label>
+            <input type="radio" id="male" name="gender" value="male"><label for="male">Male</label>
+            <input type="radio" id="female" name="gender" value="female"><label for="female">Female</label>
     
         <br>
 
@@ -122,9 +123,18 @@
         <label for="password">Password:</label>
         <input type="password" id="password" name="password" required><br>
 
-        <input type="submit" value="Sign Up" style="margin: 0 auto; display: block;">
+        <input type="submit" value="Sign Up" style="margin: 0 auto; display: block; background-color: #4BC5B8" onclick="showAlert()">
         <h5>Already have an account? </h5> <a href="loginform.php" style="margin: 0 auto; display: block; font-weight: bold; font-size: 13px" >Click Here</a>
     </form>
+    </div>
+    <br>
+    <br>
+    <br>
+    <!-- <script>
+        function showAlert() {
+            alert("Account Created");
+        }
+        </script> -->
     <!-- Javascript files-->
     <script src="js/jquery.min.js"></script>
       <script src="js/popper.min.js"></script>

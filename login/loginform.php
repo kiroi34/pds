@@ -103,7 +103,7 @@
         <label for="password">Password:</label>
         <input type="password" id="password" name="password" required><br><br>
 
-        <input type="submit" value="Login" style="margin: 0 auto; display: block;">
+        <input type="submit" value="Login" style="margin: 0 auto; display: block; background-color: #4BC5B8">
 
         <h5>Doesn't have an account? </h5> <a href="signupform.php" style="margin: 0 auto; display: block; font-weight: bold; font-size: 13px" >Click Here</a>
     </form>
