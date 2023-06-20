@@ -147,21 +147,25 @@
             <table id="example" class="table table-striped" style="width:100%; text-align: center;">
                 <thead>
                     <tr>
+                        <th>Count</th>
                         <th>ID Transaksi</th>
+                        <th>Date Transaksi</th>
                         <th>ID Pasien</th>
                         <th>ID Dokter</th>
-                        <th>Biaya Obat</th>
-                        <th>Biaya Transaksi</th>
-                        <th>Phone Number</th>
-                        <th>Address</th>
-                        <th>ID Booking</th>
+                        <th>Jumlah Obat</th>
+                        <th>Harga Dokter</th>
+                        <th>Total Harga </th>
+                        <th>Status</th>
+                   
+
+
                     </tr>
                 </thead>
                 <tbody>
                   <?php
                   $connectionString = "mongodb://localhost:27017";
                   $databaseName = "clinic";
-                  $collectionName = "transaction";
+                  $collectionName = "transaksi";
               
                   $manager = new MongoDB\Driver\Manager($connectionString);
               
@@ -178,26 +182,29 @@
                   // Looping untuk setiap dokumen
                   foreach ($cursor as $document) {
                       // Mengakses properti dokumen
-                      $idtransaksi= $document->id_pasien;
-                      $idpasien= $document->id_pasien;
-                      $iddokter= $document->id_pasien;
-                      $gender = $document->gender_pasien;
-                      $dob = $document->DOB_pasien;
-                      $phoneNumber = $document->phone_pasien;
-                      $address = $document->address_pasien;
+                      $idtransaksi= $document->transaction_id;
+                      $datetransaksi= $document->transaction_date;
+                      $idpasien= $document->patient_id;
+                      $iddokter= $document->doctor_id;
+                      $hargaDokter = $document->doctor_fee;
+                      $totalHarga = $document->transaction_total;
+                      $status = $document->payment_status;
+                      $jumlahobat = $document->medicine_qty;
 
                       // Menampilkan data dalam format HTML
-                      // echo "<tr>";
-                      // echo "<td>" . $count . "</td>";
-                      // echo "<td>" . '0' . "</td>";
-                      // echo "<td>" . $idpasien. "</td>";
-                      // echo "<td>" . $patientName. "</td>";
-                      // echo "<td>" . $gender . "</td>";
-                      // echo "<td>" . $dob . "</td>";
-                      // echo "<td>" . $phoneNumber . "</td>";
-                      // echo "<td>" . $address . "</td>";
-                      // echo "<td>" . '0' . "</td>";
-                      // echo "</tr>";
+                      echo "<tr>";
+                      echo "<td>" . $count . "</td>";
+                      echo "<td>" . $idtransaksi. "</td>";
+                      echo "<td>" . $datetransaksi. "</td>";
+                      echo "<td>" . $idpasien . "</td>";
+                      echo "<td>" . $iddokter . "</td>";
+                      foreach ($jumlahobat as $jo) {
+                        echo $jo . "<br>";
+                    }
+                      echo "<td>" . $hargaDokter . "</td>";
+                      echo "<td>" . $totalHarga . "</td>";
+                      echo "<td>" . $status . "</td>";
+                      echo "</tr>";
 
                       // Increment count
                       $count++;
