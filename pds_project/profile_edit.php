@@ -50,7 +50,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
               WHERE username = '$username'";
 
     if ($mysqli->query($query)) {
-        header('Location: ../homepage/profile.html');
+        header('Location: profile.php');
         exit();
     } else {
         echo "Error: " . $query . "<br>" . $mysqli->error;
