@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="style.css">
   <!-- Boxicons CDN Link -->
   <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
-  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="inputCashier.css">
@@ -127,7 +127,7 @@
       <br>
       <span class="logo_name"><b>Admin</b><br>XYZ CLINIC</span>
     </div>
-    <ul class="nav-links" style="margin-left:-32px">
+    <ul class="nav-links" style="margin-left:-20px">
     <li>
         <a href="adminpage.php">
           <i class='bx bx-home-alt'></i>

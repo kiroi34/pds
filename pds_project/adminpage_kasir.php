@@ -144,18 +144,14 @@
     <nav>
       <div class="sidebar-button">
         <i class='bx bx-menu sidebarBtn'></i>
-        <span class="dashboard">Dokter </span>
+        <span class="dashboard">Cashier </span>
       </div>
     </nav>
 
     <div class="home-content">
-     
-
       <div class="home-content">
         <div class="isi" id="divInput" >
-
         <form method="post" onsubmit="return validateForm()" name="myForm" enctype="multipart/form-data">
-     
         <h1 style="padding-left:2px">Insert payment</h1>
         <br>
         <h2 style="padding-left:2px">Input Bill Details</h2>
@@ -296,6 +292,16 @@
 
     function closeInput() {
       document.getElementById("divInput").style.display = 'none';
+    }
+
+    let sidebar = document.querySelector(".sidebar");
+    let sidebarBtn = document.querySelector(".sidebarBtn");
+    sidebarBtn.onclick = function() {
+      sidebar.classList.toggle("active");
+      if (sidebar.classList.contains("active")) {
+        sidebarBtn.classList.replace("bx-menu", "bx-menu-alt-right");
+      } else
+        sidebarBtn.classList.replace("bx-menu-alt-right", "bx-menu");
     }
         </script>
 </body>

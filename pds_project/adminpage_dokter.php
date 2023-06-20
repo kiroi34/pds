@@ -13,12 +13,7 @@
   <link rel="stylesheet" href="inputDokter.css">
   <link rel="stylesheet" href="bootstrap.css">
   <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
-
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="homeAdmin.css">
-  <link rel="stylesheet" href="fa_icons/css/all.css">
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.10.1/dist/sweetalert2.all.min.js"></script>
-    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/sweetalert2@10.10.1/dist/sweetalert2.min.css'>
+ 
 
   <style>
     .horizontal-container {
@@ -95,7 +90,7 @@
 
     <div class="home-content">
       <div class="overview-boxes">
-        <div class="box" style="width: 300px">
+        <div class="box">
           <div class="box-topic"><a href="#" onclick="showInput()" style="color: #080710">Input New Doctor Data</a></div>
           <i class='bx bx-right-arrow-alt' href="#"></i>
         </div>

@@ -7,7 +7,6 @@ require_once "connect.php";
 
 ?>
 
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -20,7 +19,7 @@ require_once "connect.php";
   <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="fa_icons/css/all.css">
-  <link rel="stylesheet" href="inputDokter.css">
+  <link rel="stylesheet" href="tes.css">
   <link rel="stylesheet" href="bootstrap.css">
 <!-- tabel -->
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.10.1/dist/sweetalert2.all.min.js"></script>
@@ -219,7 +218,7 @@ require_once "connect.php";
                     <td><?php echo $data['jenis_obat']; ?></td>
                     <td><?php echo $data['price_medicine']; ?></td>
                     <td><?php echo $data['stock_medicine']; ?></td>
-                    <td id="btnn<?php echo $data['id_medicine'];?>"><button type="button" class="btn btn-danger" onclick="hapus('<?php echo $data['id_medicine']; ?>')">Hapus</button></td>
+                    <td id="btnn<?php echo $data['id_medicine'];?>"><button type="button" class="btn btn-danger" onclick="hapus(<?php echo $data['id_medicine']; ?>)">Hapus</button></td>
                     </tr>
                 <?php
                       }

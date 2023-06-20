@@ -1,7 +1,7 @@
 <?php
     require_once "connect.php";
     session_start();
-    $id = $_POST['id_medicine'];
+    $id = $_POST['id'];
 
     $sql = "DELETE FROM `medicine`
     WHERE id_medicine = ".$id;
