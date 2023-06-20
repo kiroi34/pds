@@ -11,9 +11,7 @@
             while($row = mysqli_fetch_array($result)){  
                 $output .= '<li>'.$row["name_medicine"].'-[Stock : '.$row["stock_medicine"].']</li>';  
             }  
-        }else{  
-            $output .= '<li>Medicine Not Found</li>';  
-        }  
+        }
     
     $output .= '</ul>';  
     echo $output;  

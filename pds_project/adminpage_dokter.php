@@ -96,7 +96,7 @@
     <div class="home-content">
       <div class="overview-boxes">
         <div class="box" style="width: 300px">
-          <div class="box-topic"><a href="#" onclick="showInput()" style="color: #080710">Input Data Dokter Baru</a></div>
+          <div class="box-topic"><a href="#" onclick="showInput()" style="color: #080710">Input New Doctor Data</a></div>
           <i class='bx bx-right-arrow-alt' href="#"></i>
         </div>
       </div>
@@ -108,7 +108,7 @@
 
           <form action="process_insert_doctor.php" method="post" onsubmit="return validateForm()" name="myForm" enctype="multipart/form-data">
             <i class="fas fa-times" onclick="closeInput()" style="font-size:20px;color:red; float: right;"></i>
-            <h1 style="padding-left:2px">Inpsert new doctor data</h1>
+            <h1 style="padding-left:2px">Insert new doctor data</h1>
             <br>
             <h2 style="padding-left:2px">Technical Detail</h2>
             <label for="foto">Photo</label>
@@ -177,10 +177,12 @@
         </div>
       </div>
       <br>
-      <Br>
+      <br>
       <br>
 
+      <input style="float:right;width:300px" type="text" id="searchInput" placeholder="Search" onkeyup="filterArticles()">
       <section class="articles">
+
         <?php
         $connectionString = "mongodb://localhost:27017";
         $databaseName = "clinic";
@@ -326,7 +328,35 @@
       } else
         sidebarBtn.classList.replace("bx-menu-alt-right", "bx-menu");
     }
+
+    
   </script>
+  <script>
+    function showInput() {
+      document.getElementById("divInput").style.display = '';
+    }
+
+    function closeInput() {
+      document.getElementById("divInput").style.display = 'none';
+    }
+
+    function filterArticles() {
+      var input, filter, articles, i, article;
+      input = document.getElementById("searchInput");
+      filter = input.value.toUpperCase();
+      articles = document.getElementsByClassName("articles")[0].getElementsByTagName("article");
+
+      for (i = 0; i < articles.length; i++) {
+        article = articles[i];
+        if (article.innerHTML.toUpperCase().indexOf(filter) > -1) {
+          article.style.display = "";
+        } else {
+          article.style.display = "none";
+        }
+      }
+    }
+  </script>
+
 </body>
 
 </html>
