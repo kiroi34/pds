@@ -1,13 +1,13 @@
 <?php
     $servername = "localhost";
     $nama = "";
-    $umur ="";
+    $dob ="";
     $gender = "";
     $alamat = "";
     $contact = "";
     $username = "root";
     $password = "";
-    $dbname = "loginclinic";
+    $dbname = "clinic";
 
     $mysqli = new mysqli($servername, $username, $password, $dbname);
 

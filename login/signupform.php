@@ -95,20 +95,20 @@
     </style>
 </head>
 <body>
+    <div class="container">
     <h2>Sign Up</h2>
     <form action="signup.php" method="POST">
         <label for="nama">Full Name:</label>
         <input type="text" id="nama" name="nama" required><br>
 
-        <label for="umur">Age:</label>
-        <input type="date" id="umur" name="umur" required><br>
+        <label for="umur">Date of Birth:</label>
+        <input type="date" id="dob" name="dob" required><br>
 
         <label for="gender">Gender:</label>
-        <select name="gender" id="gender">
-            <option></option>
-            <option value="male" id="gender" name="gender" required>Male</option>
-            <option value="female" id="gender" name="gender" required>Female</option>
-        </select>
+
+            <input type="radio" id="male" name="gender" value="male"><label for="male">Male</label>
+            <input type="radio" id="female" name="gender" value="female"><label for="female">Female</label>
+    
         <br>
 
         <label for="alamat">Home Address:</label>
@@ -123,9 +123,18 @@
         <label for="password">Password:</label>
         <input type="password" id="password" name="password" required><br>
 
-        <input type="submit" value="Sign Up" style="margin: 0 auto; display: block;">
+        <input type="submit" value="Sign Up" style="margin: 0 auto; display: block; background-color: #4BC5B8" onclick="showAlert()">
         <h5>Already have an account? </h5> <a href="loginform.php" style="margin: 0 auto; display: block; font-weight: bold; font-size: 13px" >Click Here</a>
     </form>
+    </div>
+    <br>
+    <br>
+    <br>
+    <!-- <script>
+        function showAlert() {
+            alert("Account Created");
+        }
+        </script> -->
     <!-- Javascript files-->
     <script src="js/jquery.min.js"></script>
       <script src="js/popper.min.js"></script>

@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<?php
+session_start();
+// Check if the user is logged in
+if (!isset($_SESSION['username'])) {
+   header('Location: ../login/loginform.php');
+   exit();
+}
+?>
 <head>
    <!-- basic -->
    <meta charset="utf-8">
@@ -68,14 +75,14 @@
 <body>
    <!-- header section start -->
    <div class="header_section">
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+   <nav class="navbar navbar-expand-lg navbar-light bg-light">
          <div class="logo"><a href="index.html"><img src="images/logo.png"></a></div>
          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
          </button>
          <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
-               <li class="nav-item ">
+               <li class="nav-item active">
                   <a class="nav-link" href="index.html">Home</a>
                </li>
                <li class="nav-item">
@@ -84,11 +91,23 @@
                <li class="nav-item">
                   <a class="nav-link" href="Speciality.html">Speciality</a>
                </li>
-               <li class="nav-item active ">
+               <li class="nav-item">
                   <a class="nav-link" href="Book.php">Book</a>
                </li>
                <li class="nav-item">
-                  <a class="nav-link" href="#"><img src="images/search-icon.png"></a>
+                  <a class="nav-link" ></a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" ></a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" ></a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" ></a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" href="../pds_project/profile.php">My Profile</a>
                </li>
             </ul>
          </div>
@@ -113,6 +132,7 @@
 
    $spesialis = [];
    $nama_dokter = [];
+   $id_dokter = [];
    $jadwal = [];
    $hari = [];
    $foto = [];
@@ -131,6 +151,8 @@
       array_push($hari, $document->hari);
       // Foto
       array_push($foto, $document->foto);
+      // id_dokter
+      array_push($id_dokter, $document->id_dokter);
    }
 
    $q = 0;
@@ -168,7 +190,7 @@
          for ($k = 0; $k < count($temp); $k++) { //echo semua yg diperlukan di dokter itu
             echo "<div class='row g-0'><div class='col-lg-6'>";
             // Echo photo
-            echo "<img src='".$foto[$temp[$k]]."' width='300' height='380'>";
+            echo "<img src='" . $foto[$temp[$k]] . "' width='300' height='380'>";
             echo "</div>";
             echo "<div class='col-lg-6'>";
             // Echo nama dokter
@@ -190,47 +212,54 @@
             $tempHari = $hari[$temp[$k]];
 
             echo "<div class='row'>";
-            for ($l = 0; $l < count($jadwal[$temp[$k]]); $l++) {
-               $tempp = $jadwal[$temp[$k]];
-               $modalId = "exampleModal" . $temp[$k] . $l; // Generate unique modal id
-               echo "<div class='col-lg-4'>";
-               // Kalau hari ini kerja
-               if (in_array($currentDayOfWeek, $tempHari)){
-                  echo "<button type='button' class='btn btn-primary btn-lg jadwal' data-bs-toggle='modal' data-bs-target='#$modalId' style='margin-top:15px'>" . $tempp[$l] . "</button>";
+            // Concat
+            $jadual = '';
+            $checkkk = 0;
+            $tempjadwal = $jadwal[$temp[$k]];
+            for ($m = 0; $m < count($tempjadwal); $m++) {
+               if ($checkkk == 0) {
+                  $jadual .= $tempjadwal[$m];
+                  $checkkk++;
+               } else {
+                  $jadual .= ' - ' . $tempjadwal[$m];
                }
-               // Kalau gak kerja
-               else{
-                  echo "<button disabled type='button' class='btn btn-secondary btn-lg' data-bs-toggle='modal' data-bs-target='#$modalId' style='margin-top:15px'>" . $tempp[$l] . "</button>";
-               }
-
-               echo "</div>";
-               echo '<br><br>';
-               // Modal content
-               echo "<div class='modal fade' id='$modalId' tabindex='-1' role='dialog' aria-labelledby='exampleModalLabel' aria-hidden='true'>";
-               echo "<div class='modal-dialog' role='document'>";
-               echo "<div class='modal-content' style='background-color:#0F4C75'>";
-               echo "<div class='modal-header'>";
-               echo "<h5 class='modal-title' id='exampleModalLabel'>Please confirm your appointment</h5>";
-               echo "<button type='button' class='btn-close' data-bs-dismiss='modal' aria-label='Close'>";
-               echo "</button>";
-               echo "</div>";
-               echo "<div class='modal-body'>";
-               echo "<h2>" . $nama_dokter[$temp[$k]] . "</h2>";
-               echo "<h5>Specializes in: " . $nama_spesialis . "</h5>";
-               echo "<br><h6>Time: " . $tempp[$l] . "</h6>";
-               echo "</div>";
-               echo "<div class='modal-footer'>";
-               echo "<button type='button' class='btn btn-danger' data-bs-dismiss='modal'>Cancel</button>";
-               echo "<a class='btn btn-primary' href='../pds_project/process_book.php?dokter=".$nama_dokter[$temp[$k]]."&spesialis=".$nama_spesialis."&time=".$tempp[$l]."'>Confirm</a>";
-               echo "</div>";
-               echo "</div>";
-               echo "</div>";
-               echo "</div>";
             }
+            // button
+            $modalId = "exampleModal" . $temp[$k];
+            echo "<div class='col-lg-6'>";
+            // Kalau hari ini kerja
+            if (in_array($currentDayOfWeek, $tempHari)) {
+               echo "<button type='button' class='btn btn-primary btn-lg jadwal' data-bs-toggle='modal' data-bs-target='#$modalId' style='margin-top:15px'>" . $jadual . "</button>";
+            }
+            // Kalau gak kerja
+            else {
+               echo "<button type='button' class='btn btn-secondary btn-lg' data-bs-toggle='tooltip' data-bs-placement='bottom' data-bs-title='Unavailable today' style='margin-top:15px'>" . $jadual . "</button>";
+            }
+            echo "</div>";
+            // modal content
+            echo "<div class='modal fade' id='$modalId' tabindex='-1' role='dialog' aria-labelledby='exampleModalLabel' aria-hidden='true'>";
+            echo "<div class='modal-dialog' role='document'>";
+            echo "<div class='modal-content' style='background-color:#0F4C75'>";
+            echo "<div class='modal-header'>";
+            echo "<h5 class='modal-title' id='exampleModalLabel'>Please confirm your appointment</h5>";
+            echo "<button type='button' class='btn-close' data-bs-dismiss='modal' aria-label='Close'>";
+            echo "</button>";
+            echo "</div>";
+            echo "<div class='modal-body'>";
+            echo "<h2>" . $nama_dokter[$temp[$k]] . "</h2>";
+            echo "<h5>Specializes in: " . $nama_spesialis . "</h5>";
+            echo "<br><h6>In-clinic hours : " . $jadual. "</h6>";
+            echo "</div>";
+            echo "<div class='modal-footer'>";
+            echo "<button type='button' class='btn btn-danger' data-bs-dismiss='modal'>Cancel</button>";
+            echo "<a class='btn btn-primary' href='../pds_project/process_book.php?dokter=" . $nama_dokter[$temp[$k]] . "&spesialis=". $nama_spesialis ."&iddokter=".$id_dokter[$temp[$k]]."&time=".$jadual."'>Confirm</a>";
+            echo "</div>";
+            echo "</div>";
+            echo "</div>";
+            echo "</div>";
             echo "<br><br>";
             echo "</div></div></div><br><br>"; // Close the row and col-lg-3 divs
          }
-
          echo "</div></div></div>"; // Close the jumbotron div
       }
    }
@@ -256,7 +285,7 @@
                <div class="Useful_text">There are many variations of passages of Lorem Ipsum available, but the majority have suffered ,</div>
             </div>
             <div class="col-lg-3 col-sm-6">
-
+               
                <div class="social_icon">
                   <ul>
                      <li><a href="#"><img src="images/fb-icon.png"></a></li>
@@ -288,6 +317,12 @@
    <!-- javascript -->
    <script src="js/owl.carousel.js"></script>
    <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+   <script>
+      // Initialize tooltips
+      $(function () {
+         $('[data-bs-toggle="tooltip"]').tooltip();
+      });
+   </script>
 </body>
 
 </html>

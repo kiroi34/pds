@@ -32,7 +32,7 @@
     <style>
         body {
             /* font-family: Arial, sans-serif; */
-            background-color: #CEEBED;
+            background-color: #F2E3DB;
         }
 
         h2 {
@@ -95,6 +95,7 @@
     </style>
 </head>
 <body>
+
     <h2>Admin Login</h2>
     <form action="adminlogin.php" method="POST">
         <label for="username">Username:</label>
@@ -103,10 +104,23 @@
         <label for="password">Password:</label>
         <input type="password" id="password" name="password" required><br><br>
 
-        <input type="submit" value="Login" style="margin: 0 auto; display: block;">
+        <input type="submit" value="Login" style="margin: 0 auto; display: block; background-color: #41644A;">
+
 
         <h5>Doesn't have an account? </h5> <a href="adminsignupform.php" style="margin: 0 auto; display: block; font-weight: bold; font-size: 13px" >Click Here</a>
 
     </form>
+     <!-- Javascript files-->
+     <script src="js/jquery.min.js"></script>
+      <script src="js/popper.min.js"></script>
+      <script src="js/bootstrap.bundle.min.js"></script>
+      <script src="js/jquery-3.0.0.min.js"></script>
+      <script src="js/plugin.js"></script>
+      <!-- sidebar -->
+      <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+      <script src="js/custom.js"></script>
+      <!-- javascript --> 
+      <script src="js/owl.carousel.js"></script>
+      <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
 </body>
 </html>

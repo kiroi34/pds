@@ -12,11 +12,19 @@
   <link rel="stylesheet" href="fa_icons/css/all.css">
   <link rel="stylesheet" href="inputDokter.css">
   <link rel="stylesheet" href="bootstrap.css">
+  <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="homeAdmin.css">
+  <link rel="stylesheet" href="fa_icons/css/all.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.10.1/dist/sweetalert2.all.min.js"></script>
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/sweetalert2@10.10.1/dist/sweetalert2.min.css'>
 
   <style>
     .horizontal-container {
       display: flex;
       flex-direction: row;
+      flex-wrap: wrap;
     }
 
     .grid-container {
@@ -87,8 +95,8 @@
 
     <div class="home-content">
       <div class="overview-boxes">
-        <div class="box">
-          <div class="box-topic"><a href="#" onclick="showInput()" style="color: #080710;">Input Data Dokter Baru</a></div>
+        <div class="box" style="width: 300px">
+          <div class="box-topic"><a href="#" onclick="showInput()" style="color: #080710">Input New Doctor Data</a></div>
           <i class='bx bx-right-arrow-alt' href="#"></i>
         </div>
       </div>
@@ -100,7 +108,7 @@
 
           <form action="process_insert_doctor.php" method="post" onsubmit="return validateForm()" name="myForm" enctype="multipart/form-data">
             <i class="fas fa-times" onclick="closeInput()" style="font-size:20px;color:red; float: right;"></i>
-            <h1 style="padding-left:2px">Inpsert new doctor data</h1>
+            <h1 style="padding-left:2px">Insert new doctor data</h1>
             <br>
             <h2 style="padding-left:2px">Technical Detail</h2>
             <label for="foto">Photo</label>
@@ -169,10 +177,12 @@
         </div>
       </div>
       <br>
-      <Br>
+      <br>
       <br>
 
+      <input style="float:right;width:300px" type="text" id="searchInput" placeholder="Search" onkeyup="filterArticles()">
       <section class="articles">
+
         <?php
         $connectionString = "mongodb://localhost:27017";
         $databaseName = "clinic";
@@ -272,7 +282,7 @@
 
               <br>
 
-
+              
               <div class="btn-group" style="width:100%">
                 <form action="adminpage_edit_dokter.php" method="post">
                   <input type="hidden" name="dapetinID" value="<?php echo $iddokter ?>">
@@ -318,7 +328,35 @@
       } else
         sidebarBtn.classList.replace("bx-menu-alt-right", "bx-menu");
     }
+
+    
   </script>
+  <script>
+    function showInput() {
+      document.getElementById("divInput").style.display = '';
+    }
+
+    function closeInput() {
+      document.getElementById("divInput").style.display = 'none';
+    }
+
+    function filterArticles() {
+      var input, filter, articles, i, article;
+      input = document.getElementById("searchInput");
+      filter = input.value.toUpperCase();
+      articles = document.getElementsByClassName("articles")[0].getElementsByTagName("article");
+
+      for (i = 0; i < articles.length; i++) {
+        article = articles[i];
+        if (article.innerHTML.toUpperCase().indexOf(filter) > -1) {
+          article.style.display = "";
+        } else {
+          article.style.display = "none";
+        }
+      }
+    }
+  </script>
+
 </body>
 
 </html>

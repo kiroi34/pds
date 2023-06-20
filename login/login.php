@@ -7,6 +7,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 // Retrieve user input from the form
 $username = $_POST['username'];
 $password = $_POST['password'];
+$_SESSION['username'] = $username;
+
 
 
 
@@ -24,18 +26,20 @@ $result = $mysqli->query($query);
 if ($result->num_rows === 1) {
     $row = $result->fetch_assoc();
     $hashedPassword = $row['password'];
+    $id_pasien = $row['id_pasien']; 
 
     // Verify the password
     if (password_verify($password, $hashedPassword)) {
         // Password is correct, create a session
         $_SESSION['username'] = $username;
-        header("Location: ../pds/homepage/index.html"); // Redirect to the welcome page
+        header("Location: ../homepage/index.html"); // Redirect to the welcome page
+        $_SESSION['id_pasien'] = $id_pasien; 
         exit();
     }
 }
 
 // Invalid credentials
-echo "Invalid username or password.";
+echo "<script>alert('Account not Found'); window.location.href = 'loginform.php';</script>";
 $mysqli->close();
 }
 ?>

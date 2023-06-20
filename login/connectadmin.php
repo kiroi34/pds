@@ -3,7 +3,7 @@
     $nama = "";
     $username = "root";
     $password = "";
-    $dbname = "loginclinic";
+    $dbname = "clinic";
 
     $mysqli = new mysqli($servername, $username, $password, $dbname);
 
