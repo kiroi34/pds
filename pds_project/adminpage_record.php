@@ -124,7 +124,7 @@
       <br>
       <span class="logo_name"><b>Admin</b><br>XYZ CLINIC</span>
     </div>
-    <ul class="nav-links" style="margin-left:-32px">
+    <ul class="nav-links" style="margin-left:-20px">
     <li>
         <a href="adminpage.php">
           <i class='bx bx-home-alt'></i>
