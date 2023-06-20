@@ -102,37 +102,37 @@
     <ul class="nav-links">
       <li>
         <a href="adminpage.php">
-          <i class='bx bx-home-alt'></i>
+          <i class='bx bx-book-open'></i>
           <span class="links_name" style="color: #F2E3DB; font-size:18px">Booking List</span>
         </a>
       </li>
       <li>
         <a href="adminpage_dokter.php">
-          <i class='bx bx-home-alt'></i>
+          <i class='bx bxs-user-detail'></i>
           <span class="links_name" style="color: #F2E3DB; font-size:18px">Doctor</span>
         </a>
       </li>
       <li>
         <a href="adminpage_record.php">
-          <i class='bx bx-home-alt'></i>
+          <i class='bx bx-data'></i>
           <span class="links_name" style="color: #F2E3DB; font-size:18px">Patient Records</span>
         </a>
       </li>
       <li>
         <a href="adminpage_transaksi.php">
-          <i class='bx bx-home-alt'></i>
+          <i class='bx bx-transfer'></i>
           <span class="links_name" style="color: #F2E3DB; font-size:18px">Transaction</span>
         </a>
       </li>
       <li>
         <a href="adminpage_medicine.php">
-          <i class='bx bx-home-alt'></i>
+          <i class='bx bx-capsule'></i>
           <span class="links_name" style="color: #F2E3DB; font-size:18px">Medicine</span>
         </a>
       </li>
       <li>
         <a href="adminpage_kasir.php" class="active">
-          <i class='bx bx-home-alt'></i>
+          <i class='bx bx-credit-card'></i>
           <span class="links_name" style="color: #F2E3DB; font-size:18px">Cashier</span>
         </a>
       </li>
