@@ -51,7 +51,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
               WHERE username = '$username'";
 
     if ($mysqli->query($query)) {
-        header('Location: ../homepage/profile.html');
+        header('Location: ../homepage/profile.php');
         exit();
     } else {
         echo "Error: " . $query . "<br>" . $mysqli->error;
@@ -185,7 +185,7 @@ $mysqli->close();
     <label for="contact">Contact Number:</label>
     <input type="text" id="contact" name="contact" value="<?php echo $contact; ?>" disabled><br>
 
-    <button type="button" class="btn btn-danger" style="background-color: black" onclick="window.location.href='../homepage/index.html'">Back</button>
+    <button type="button" class="btn btn-danger" style="background-color: black" onclick="window.location.href='../homepage/index.php'">Back</button>
     <button type="button" class="btn btn-danger" style="background-color: #4BC5B8" onclick="window.location.href='profile_edit.php'">Edit My Profile</button>
     <button type="button" class="btn btn-danger" style="background-color: #4BC5B8" onclick="logout()">Log Out</button>
     <br>
@@ -197,7 +197,7 @@ $mysqli->close();
         xhr.onreadystatechange = function () {
           if (xhr.readyState === 4 && xhr.status === 200) {
             // Redirect to the desired page after successful logout
-            window.location.href = "../homepage/index.html";
+            window.location.href = "../homepage/index.php";
           }
         };
         xhr.send();

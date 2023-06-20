@@ -6,6 +6,6 @@ session_unset();
 session_destroy();
 
 // Redirect to the desired page after logout
-header("Location: ../homepage/index.html");
+header("Location: ../homepage/index.php");
 exit();
 ?>
