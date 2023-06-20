@@ -113,6 +113,7 @@
 
    $spesialis = [];
    $nama_dokter = [];
+   $id_dokter = [];
    $jadwal = [];
    $hari = [];
    $foto = [];
@@ -131,6 +132,8 @@
       array_push($hari, $document->hari);
       // Foto
       array_push($foto, $document->foto);
+      // id_dokter
+      array_push($id_dokter, $document->id_dokter);
    }
 
    $q = 0;
@@ -230,7 +233,7 @@
             echo "</div>";
             echo "<div class='modal-footer'>";
             echo "<button type='button' class='btn btn-danger' data-bs-dismiss='modal'>Cancel</button>";
-            echo "<a class='btn btn-primary' href='../pds_project/process_book.php?dokter=" . $nama_dokter[$temp[$k]] . "&spesialis=". $nama_spesialis ."'>Confirm</a>";
+            echo "<a class='btn btn-primary' href='../pds_project/process_book.php?dokter=" . $nama_dokter[$temp[$k]] . "&spesialis=". $nama_spesialis ."&iddokter=".$id_dokter[$temp[$k]]."&time=".$jadual."'>Confirm</a>";
             echo "</div>";
             echo "</div>";
             echo "</div>";
