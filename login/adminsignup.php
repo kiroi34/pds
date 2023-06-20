@@ -21,7 +21,7 @@ $query = "SELECT * FROM admin_table WHERE username = '$username'";
 $result = $mysqli->query($query);
 
 if ($result->num_rows > 0) {
-    echo "Username already exists. Please choose a different username.";
+    echo "<script>alert('Username Taken'); window.location.href = 'adminsignupform.php';</script>";
     $mysqli->close();
     exit();
 }
@@ -33,10 +33,7 @@ $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
 $query = "INSERT INTO admin_table (nama, username, password) VALUES ('$nama', '$username', '$hashedPassword')";
 
 if ($mysqli->query($query)) {
-    header('location:adminform.php');
-    echo "<div class='alert alert-success'>
-    <strong>Success!</strong> Your account has been created
-  </div>";
+    echo "<script>alert('Account Created'); window.location.href = 'adminform.php';</script>";
 } else {
     echo "Error: " . $query . "<br>" . $mysqli->$error;
 }

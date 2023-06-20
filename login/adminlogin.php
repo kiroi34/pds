@@ -35,7 +35,7 @@ if ($result->num_rows === 1) {
 }
 
 // Invalid credentials
-echo "Invalid username or password.";
+echo "<script>alert('Account not Found'); window.location.href = 'adminform.php';</script>";
 $mysqli->close();
 }
 ?>
