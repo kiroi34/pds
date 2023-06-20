@@ -48,18 +48,8 @@
       box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
     }
 
-    .isi {
-      background-color: #f2f2f2;
-      padding: 20px;
-      margin: auto;
-      display: flex;
-      align-items: center;
-      justify-content: flex-start;
-      width: 85%;
-      background: #fff;
-      border-radius: 12px;
-      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-    }
+
+    
 
     input[type=number],
     select {

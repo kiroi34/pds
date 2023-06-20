@@ -56,7 +56,6 @@ include 'connect.php'
       background-color: #f2f2f2;
       padding: 20px;
       margin: auto;
-      display: flex;
       align-items: center;
       justify-content: flex-start;
       width: 85%;

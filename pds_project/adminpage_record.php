@@ -10,7 +10,10 @@
   <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="homeAdmin.css">
+  <link rel="stylesheet" href="fa_icons/css/all.css">
+  <link rel="stylesheet" href="inputDokter.css">
+  <link rel="stylesheet" href="bootstrap.css">
+  
 
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.10.1/dist/sweetalert2.all.min.js"></script>
     <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/sweetalert2@10.10.1/dist/sweetalert2.min.css'>
@@ -49,42 +52,7 @@
       box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
     }
 
-    .isi {
-      background-color: #f2f2f2;
-      padding: 20px;
-      margin: auto;
-      display: flex;
-      align-items: center;
-      justify-content: flex-start;
-      width: 85%;
-      background: #fff;
-      border-radius: 12px;
-      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-    }
-
-    input[type=number],
-    select {
-      height: 30px;
-      width: 100%;
-      padding: 12px 20px;
-      margin: 8px 0;
-      display: inline-block;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      box-sizing: border-box;
-    }
-
-    input[type=text],
-    select {
-      height: 30px;
-      width: 100%;
-      padding: 12px 20px;
-      margin: 8px 0;
-      display: inline-block;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      box-sizing: border-box;
-    }
+  
   </style>
   <script>
     
@@ -174,6 +142,53 @@
 
     <div class="home-content">
       <div class="overview-boxes">
+        <div class="box">
+          <div class="box-topic"><a href="#" onclick="showInput()" style="color: #080710">Input New Patient Record Data</a></div>
+          <i class='bx bx-right-arrow-alt' href="#"></i>
+        </div>
+      </div>
+
+      <div class="home-content">
+        <div class="isi" id="divInput" style="display:none">
+          <form action="process_insert_record.php" method="post" onsubmit="return validateForm()" name="myForm" enctype="multipart/form-data">
+            <i class="fas fa-times" onclick="closeInput()" style="font-size:20px;color:red; float: right;"></i>
+
+            <h1 style="padding-left:2px">Insert new Record data</h1>
+            <br>
+
+            <label for="idDoc">ID Dokter</label>
+            <input type="text" id="idDoc" name="idDoc" placeholder="Insert ID Dokter..." required>
+
+            <label for="idPatient">ID Pasien</label>
+            <input type="text" id="idPatient" name="idPatient" placeholder="Insert ID Pasien..." required>
+            <br>
+
+            <label for="riwayatobat">Riwayat Obat</label>
+            <input type="textarea" id="riwayatobat" name="riwayatobat" placeholder="Insert Riwayat Obat..." required>
+            <br>
+            <label for="gejala">Gejala Pasien</label>
+            <input type="textarea" id="gejala" name="gejala" placeholder="Insert Gejala Pasien..." required>
+            <br>
+            <label for="diagnosa">Diagnosa Pasien</label>
+            <input type="textarea" id="diagnosa" name="diagnosa" placeholder="Insert Riwayat Obat..." required>
+            <br>
+            <label for="tindakan">Tindakan Dilakukan</label>
+            <input type="textarea" id="tindakan" name="tindakan" placeholder="Insert Riwayat Obat..." required>
+            <br>
+            <label for="tanggal">Tanggal Rekam Medis</label>
+            <br>
+            <input type="date" id="tanggal" name="tanggal" placeholder="Insert Riwayat Obat..." required>
+            <br>
+            <br>
+            <input type="submit" value="Submit" name="submit">
+          </form>
+        </div>
+      </div>
+
+
+
+    <div class="home-content">
+      <div class="overview-boxes">
         <div class="isi">
           <div class="right-side">
             <h2>List Record</h2>
@@ -257,6 +272,15 @@
 
   </section>
   <script>
+
+function showInput() {
+      document.getElementById("divInput").style.display = '';
+    }
+
+    function closeInput() {
+      document.getElementById("divInput").style.display = 'none';
+    }
+
     let sidebar = document.querySelector(".sidebar");
     let sidebarBtn = document.querySelector(".sidebarBtn");
     sidebarBtn.onclick = function() {

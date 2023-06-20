@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="fa_icons/css/all.css">
   <link rel="stylesheet" href="inputDokter.css">
   <link rel="stylesheet" href="bootstrap.css">
-  <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+ 
  
 
   <style>

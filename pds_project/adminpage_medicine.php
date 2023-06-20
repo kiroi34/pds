@@ -50,6 +50,7 @@ require_once "connect.php";
       grid-template-columns: repeat(2, 1fr);
       grid-gap: 10px;
     }
+    
   </style>
   <script>
      function hapus(id) {
