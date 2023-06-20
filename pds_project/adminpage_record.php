@@ -189,7 +189,7 @@
                         <th>Diagnosa</th>
                         <th>tindakan</th>
                         <th>Tanggal Rekam Mendis</th>
-                        <th>ID Booking</th>
+                
                     </tr>
                 </thead>
                 <tbody>
@@ -237,7 +237,7 @@
                       echo "<td>" . $diagnosa . "</td>";
                       echo "<td>" . $tindakan . "</td>";
                       echo "<td>" . $tanggalrm . "</td>";
-                      echo "<td>" . '0' . "</td>";
+                     
                       echo "</tr>";
 
                       // Increment count

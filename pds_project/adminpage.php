@@ -1,3 +1,7 @@
+<?php
+include 'connect.php'
+?>
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
@@ -84,9 +88,6 @@
       border-radius: 4px;
       box-sizing: border-box;
     }
-
-    
-  
   </style>
   <script>
         $(document).ready(function() {
@@ -109,6 +110,22 @@
             } );
           }
     );
+
+    function myFunction() {
+    // Show the confirmation dialog using SweetAlert2
+    Swal.fire({
+      title: "Are you sure you want to clear the table?",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonText: "Yes, clear it!",
+      cancelButtonText: "Cancel",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        // User clicked the "Yes, clear it!" button
+        window.location.href = "clear_table.php";
+      }
+    });
+  }
     </script>
 
 
@@ -176,72 +193,41 @@
       <div class="overview-boxes">
         <div class="isi">
           <div class="right-side">
-            <h2>List Pasien</h2>
+          <h2>Patient Booking List 
+            <a type='button' style='float:right' class='btn btn-danger' onclick="myFunction()">Clear table</a></h2>
             <div class="table-responsive">
           <div style="overflow-x: auto;">
             <table id="example" class="table table-striped" style="width:100%; text-align: center;">
                 <thead>
                     <tr>
-                        <th>Nomor</th>
-                        <th>Queue Number</th>
-                        <th>Id Pasient</th>
-                        <th>Patient Name</th>
-                        <th>Gender</th>
-                        <th>Date Of Birth</th>
-                        <th>Phone Number</th>
-                        <th>Address</th>
-                        <th>ID Booking</th>
+                      <th>Number</th>
+                      <th>Patient ID</th>
+                      <th>Doctor ID</th>
+                      <th>Queue Number</th>
                     </tr>
                 </thead> 
                 <tbody>
+
                   <?php
-                  $connectionString = "mongodb://localhost:27017";
-                  $databaseName = "clinic";
-                  $collectionName = "pasien";
-              
-                  $manager = new MongoDB\Driver\Manager($connectionString);
-              
-                  $query = new MongoDB\Driver\Query([]);
-              
-                  $database = $databaseName;
-                  $collection = $collectionName;
-              
-                  $cursor = $manager->executeQuery("$database.$collection", $query);
-
-                  // Menginisialisasi variabel count
-                  $count = 1;
-
-                  // Looping untuk setiap dokumen
-                  foreach ($cursor as $document) {
-                      // Mengakses properti dokumen
-                      $idpasien= $document->id_pasien;
-                      $patientName = $document->name_pasien;
-                      $gender = $document->gender_pasien;
-                      $dob = $document->DOB_pasien;
-                      $phoneNumber = $document->phone_pasien;
-                      $address = $document->address_pasien;
-
-                      // Menampilkan data dalam format HTML
-                      echo "<tr>";
-                      echo "<td>" . $count . "</td>";
-                      echo "<td>" . '0' . "</td>";
-                      echo "<td>" . $idpasien. "</td>";
-                      echo "<td>" . $patientName. "</td>";
-                      echo "<td>" . $gender . "</td>";
-                      echo "<td>" . $dob . "</td>";
-                      echo "<td>" . $phoneNumber . "</td>";
-                      echo "<td>" . $address . "</td>";
-                      echo "<td>" . '0' . "</td>";
-                      echo "</tr>";
-
-                      // Increment count
-                      $count++;
+                        $count = 1;
+                        $sql = "SELECT * FROM bookings";
+                        $result = mysqli_query($conn, $sql);
+    
+                        if (mysqli_num_rows($result) > 0) {
+                          // output data of each row
+                          while ($row = mysqli_fetch_assoc($result)) {
+                            // Menampilkan data dalam format HTML
+                            echo "<tr>";
+                            echo "<td>" . $count . "</td>";
+                            echo "<td>" . $row["id_pasien"] . "</td>";
+                            echo "<td>" . $row["id_dokter"] . "</td>";
+                            echo "<td>" . $row["nomor_antrian"] . "</td>";
+                            echo "</tr>";
+                            $count++;
+                          }
                   }
                   ?>
 
-
-
-            
                 </tbody>
                 
            </table>
