@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="homeAdmin.css">
+  <link rel="stylesheet" href="inputCashier.css">
 
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
@@ -67,7 +67,12 @@
       border: 1px solid #ccc;
       border-radius: 4px;
       box-sizing: border-box;
+
+      
     }
+
+
+    
   </style>
   <script>
     
@@ -89,7 +94,7 @@
     <li>
         <a href="adminpage.php">
           <i class='bx bx-home-alt'></i>
-          <span class="links_name" style="color: #F2E3DB; font-size:18px">List Booking</span>
+          <span class="links_name" style="color: #F2E3DB; font-size:18px">Booking List</span>
         </a>
       </li>
       <li>
@@ -101,13 +106,25 @@
       <li>
         <a href="adminpage_record.php">
           <i class='bx bx-home-alt'></i>
-          <span class="links_name" style="color: #F2E3DB; font-size:18px">Record Pasien</span>
+          <span class="links_name" style="color: #F2E3DB; font-size:18px">Patient records</span>
         </a>
       </li>
       <li>
-        <a href="adminpage_transaksi.php" class="active" >
+        <a href="adminpage_transaksi.php" class="active">
           <i class='bx bx-home-alt'></i>
-          <span class="links_name" style="color: #F2E3DB; font-size:18px">Transaksi</span>
+          <span class="links_name" style="color: #F2E3DB; font-size:18px">Transaction</span>
+        </a>
+      </li>
+      <li>
+        <a href="adminpage_medicine.php">
+          <i class='bx bx-home-alt'></i>
+          <span class="links_name" style="color: #F2E3DB; font-size:18px">Medicine</span>
+        </a>
+      </li>
+      <li>
+        <a href="adminpage_kasir.php">
+          <i class='bx bx-home-alt'></i>
+          <span class="links_name" style="color: #F2E3DB; font-size:18px">Cashier</span>
         </a>
       </li>
     </ul>
@@ -144,7 +161,7 @@
                   <?php
                   $connectionString = "mongodb://localhost:27017";
                   $databaseName = "clinic";
-                  $collectionName = "record";
+                  $collectionName = "transaction";
               
                   $manager = new MongoDB\Driver\Manager($connectionString);
               

@@ -2,8 +2,9 @@
         "_id": "6489c5c02d6959be75f5fda8",
         "foto": "https://drive.google.com/uc?export=view&id=1dAEbPNhBnXC1wU16elJYHfIhPlirR-77",
         "id_dokter": "d0",
-        "registered": "2015-03-21T03:02:35 -07:00",
+        "registered": "2015-03-21",
         "spesialis": "umum",
+        "biaya": "75000",
         "biodata": {
             "name": "Cobb Melton",
             "gender": "male",
@@ -13,16 +14,15 @@
             "address": "639 McKibben Street, Tioga, Washington, 6565"
         },
         "hari": ["0", "1", "4", "6"],
-        "jadwal": ["08:00-08:30", "08:30-09:00", "09:00-09:30", "09:30-10:00", "10:00-10:30", "10:30-11:00", "11:00-11:30", "11:30-12:00",
-            "15.30-16.00", "16.00-16.30", "16.30-17.00", "17.00-17.30", "17.30-18.00"
-        ]
+        "jadwal": ["08:00", "18:00"]
     },
     {
         "_id": "6489c5c048cea6b4b3937fad",
         "foto": "https://drive.google.com/uc?export=view&id=1dAEbPNhBnXC1wU16elJYHfIhPlirR-77",
         "id_dokter": "d1",
-        "registered": "2015-03-21T03:02:35 -07:00",
+        "registered": "2015-03-21",
         "spesialis": "anak",
+        "biaya": "110000",
         "biodata": {
             "name": "Delia Gray",
             "gender": "female",
@@ -32,18 +32,15 @@
             "address": "853 Oriental Boulevard, Laurelton, Hawaii, 2160"
         },
         "hari": ["3", "4", "5"],
-        "jadwal": ["08:00-08:30", "08:30-09:00", "09:00-09:30", "09:30-10:00", "10:00-10:30", "10:30-11:00", "11:00-11:30", "11:30-12:00", "15.30-16.00", "16.00-16.30", "16.30-17.00", "17.00-17.30", "17.30-18.00"]
+        "jadwal": ["08:00", "18:00"]
     },
     {
         "_id": "6489c5c0caf1622a4ea20760",
         "foto": "https://drive.google.com/uc?export=view&id=1dAEbPNhBnXC1wU16elJYHfIhPlirR-77",
         "id_dokter": "d2",
-        "registered": "2015-03-21T03:02:35 -07:00",
+        "registered": "2015-03-21",
         "spesialis": "mata",
-        "hari": ["0", "1", "4", "6"],
-        "jadwal": ["09:00-09:30", "09:30-10:00", "10:00-10:30", "10:30-11:00", "11:00-11:30", "11:30-12:00",
-            "13.00-13.30", "13.30-14.00", "14.00-14.30", "14.30-15.00", "15.00-15.30", "15.30-16.00", "16.00-16.30", "16.30-17.00"
-        ],
+        "biaya": "125000",
         "biodata": {
             "name": "Sheppard Franco",
             "gender": "male",
@@ -51,15 +48,17 @@
             "email": "sheppardfranco@artworlds.com",
             "phone": "+1 (943) 500-2796",
             "address": "496 Oceanview Avenue, Stonybrook, Marshall Islands, 8922"
-        }
+        },
+        "hari": ["0", "1", "4", "6"],
+        "jadwal": ["09:00", "17:00"]
     },
     {
         "_id": "6489c5c0e4c34cf12814d695",
         "foto": "https://drive.google.com/uc?export=view&id=1dAEbPNhBnXC1wU16elJYHfIhPlirR-77",
         "id_dokter": "d3",
-        "registered": "2015-03-21T03:02:35 -07:00",
+        "registered": "2015-03-21",
         "spesialis": "THT",
-        "hari": ["1", "2", "3", "5"],
+        "biaya": "115000",
         "biodata": {
             "name": "Farrell Wiley",
             "gender": "male",
@@ -68,14 +67,16 @@
             "phone": "+1 (988) 570-2171",
             "address": "933 Sutter Avenue, Ryderwood, New Hampshire, 6511"
         },
-        "jadwal": ["08:00-08:30", "08:30-09:00", "09:00-09:30", "09:30-10:00", "10:00-10:30", "10:30-11:00", "11:00-11:30", "11:30-12:00", "14.00-14.30", "14.30-15.00", "15.00-15.30", "15.30-16.00", "16.00-16.30", "16.30-17.00", "17.00-17.30", "17.30-18.00"]
+        "hari": ["1", "2", "3", "5"],
+        "jadwal": ["08:00", "18:00"]
     },
     {
         "_id": "6489c5c0460be9baec19ce4f",
         "foto": "https://drive.google.com/uc?export=view&id=1dAEbPNhBnXC1wU16elJYHfIhPlirR-77",
         "id_dokter": "d4",
-        "registered": "2015-03-21T03:02:35 -07:00",
+        "registered": "2015-03-21",
         "spesialis": "anak",
+        "biaya": "100000",
         "biodata": {
             "name": "Susanne Oneill",
             "gender": "female",
@@ -85,16 +86,15 @@
             "address": "749 Burnett Street, Thermal, New Mexico, 9046"
         },
         "hari": ["0", "1", "2", "3", "4", "5"],
-        "jadwal": ["10:00-10:30", "10:30-11:00", "11:00-11:30", "11:30-12:00", "12:00-12:30", "12:30-13:00",
-            "13.00-13.30", "13.30-14.00", "17.00-17.30", "17.30-18.00", "18.00-18.30", "18.30-19.00", "19.00-19.30", "19.30-20.00", "20.00-20.30", "20.30-21.00"
-        ]
+        "jadwal": ["10:00", "21:00"]
     },
     {
         "_id": "6489c5c0fadb2dc166c55aa6",
         "foto": "https://drive.google.com/uc?export=view&id=1dAEbPNhBnXC1wU16elJYHfIhPlirR-77",
         "id_dokter": "d5",
-        "registered": "2015-03-21T03:02:35 -07:00",
+        "registered": "2015-03-21",
         "spesialis": "umum",
+        "biaya": "85000",
         "biodata": {
             "name": "Brittany Sanchez",
             "gender": "female",
@@ -104,16 +104,15 @@
             "address": "476 Irving Avenue, Rossmore, Virginia, 3335"
         },
         "hari": ["0", "1", "2", "3", "4", "5", "6"],
-        "jadwal": ["11:00-11:30", "11:30-12:00", "12:00-12:30", "12:30-13:00",
-            "13.00-13.30", "13.30-14.00", "14.00-14.30", "14.30-15.00", "15.00-15.30", "15.30-16.00"
-        ]
+        "jadwal": ["11:00", "16:00"]
     },
     {
         "_id": "6489c5c00df944bf1225d21c",
         "foto": "https://drive.google.com/uc?export=view&id=1dAEbPNhBnXC1wU16elJYHfIhPlirR-77",
         "id_dokter": "d6",
-        "registered": "2015-03-21T03:02:35 -07:00",
+        "registered": "2015-03-21",
         "spesialis": "anak",
+        "biaya": "105000",
         "biodata": {
             "name": "Alison Mosley",
             "gender": "female",
@@ -123,14 +122,15 @@
             "address": "915 Ridge Boulevard, Crucible, Maryland, 6470"
         },
         "hari": ["4", "5", "6"],
-        "jadwal": ["12:00-12:30", "12:30-13:00", "13.00-13.30", "13.30-14.00", "14.00-14.30", "14.30-15.00", "15.00-15.30", "15.30-16.00"]
+        "jadwal": ["12:00", "16:00"]
     },
     {
         "_id": "6489c5c0e979e30b6cceae86",
         "foto": "https://drive.google.com/uc?export=view&id=1dAEbPNhBnXC1wU16elJYHfIhPlirR-77",
         "id_dokter": "d7",
-        "registered": "2015-03-21T03:02:35 -07:00",
+        "registered": "2015-03-21",
         "spesialis": "gigi",
+        "biaya": "125000",
         "biodata": {
             "name": "Frost Noel",
             "gender": "male",
@@ -140,16 +140,15 @@
             "address": "672 Vine Street, Gibsonia, North Carolina, 3746"
         },
         "hari": ["0", "2", "4"],
-        "jadwal": ["10:00-10:30", "10:30-11:00", "11:00-11:30", "11:30-12:00", "12:00-12:30", "12:30-13:00",
-            "13.00-13.30", "13.30-14.00", "18.00-18.30", "18.30-19.00", "19.00-19.30", "19.30-20.00", "20.00-20.30", "20.30-21.00"
-        ]
+        "jadwal": ["10:00", "21:00"]
     },
     {
         "_id": "6489c5c0b94af6325d7af11a",
         "foto": "https://drive.google.com/uc?export=view&id=1dAEbPNhBnXC1wU16elJYHfIhPlirR-77",
         "id_dokter": "d8",
-        "registered": "2015-03-21T03:02:35 -07:00",
+        "registered": "2015-03-21",
         "spesialis": "THT",
+        "biaya": "140000",
         "biodata": {
             "name": "Pearl Welch",
             "gender": "female",
@@ -159,14 +158,15 @@
             "address": "857 Krier Place, Belleview, New Jersey, 2793"
         },
         "hari": ["1", "3", "5"],
-        "jadwal": ["16.00-17.30", "17.30-18.00", "18.00-18.30", "18.30-19.00", "19.00-19.30", "19.30-20.00"]
+        "jadwal": ["16.00", "20:00"]
     },
     {
         "_id": "6489c5c0e722865200d6b23b",
         "foto": "https://drive.google.com/uc?export=view&id=1dAEbPNhBnXC1wU16elJYHfIhPlirR-77",
         "id_dokter": "d9",
-        "registered": "2015-03-21T03:02:35 -07:00",
+        "registered": "2016-04-02",
         "spesialis": "gigi",
+        "biaya": "130000",
         "biodata": {
             "name": "John Hodges",
             "gender": "female",
@@ -176,6 +176,6 @@
             "address": "734 Kermit Place, Dola, Florida, 119"
         },
         "hari": ["0", "1", "2", "3", "4", "5", "6"],
-        "jadwal": ["11:00-11:30", "11:30-12:00", "12:00-12:30", "12:30-13:00", "15.00-15.30", "15.30-16.00", "16.00-17.30", "17.30-18.00"]
+        "jadwal": ["11:00", "18:00"]
     }
 ]
