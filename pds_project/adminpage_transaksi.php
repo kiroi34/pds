@@ -152,6 +152,7 @@
                         <th>Date Transaksi</th>
                         <th>ID Pasien</th>
                         <th>ID Dokter</th>
+                        <th>Nama Obat</th>
                         <th>Jumlah Obat</th>
                         <th>Harga Dokter</th>
                         <th>Total Harga </th>
@@ -198,9 +199,16 @@
                       echo "<td>" . $datetransaksi. "</td>";
                       echo "<td>" . $idpasien . "</td>";
                       echo "<td>" . $iddokter . "</td>";
+                      echo "<td>";
+                      foreach ($jumlahobat as $key => $nm) {
+                        echo $key . "<br>";
+                    }
+                    echo "</td>";
+                      echo "<td>";
                       foreach ($jumlahobat as $jo) {
                         echo $jo . "<br>";
                     }
+                    echo "</td>";
                       echo "<td>" . $hargaDokter . "</td>";
                       echo "<td>" . $totalHarga . "</td>";
                       echo "<td>" . $status . "</td>";
