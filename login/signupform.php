@@ -61,7 +61,7 @@
         }
 
         label {
-            display: block;
+            /* display: block; */
             font-weight: bold;
             margin-top: 10px;
         }
@@ -101,10 +101,10 @@
         <label for="nama">Full Name:</label>
         <input type="text" id="nama" name="nama" required><br>
 
-        <label for="umur">Date of Birth:</label>
-        <input type="date" id="dob" name="dob" required><br>
+        <label for="umur">Date of Birth:</label><br>
+        <input type="date" id="dob" name="dob" required><br><br>
 
-        <label for="gender">Gender:</label>
+        <label for="gender">Gender:</label><br>
 
             <input type="radio" id="male" name="gender" value="male"><label for="male">Male</label>
             <input type="radio" id="female" name="gender" value="female"><label for="female">Female</label>
@@ -121,7 +121,7 @@
         <input type="text" id="username" name="username" required><br>
 
         <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required><br>
+        <input type="password" id="password" name="password" required><br><br>
 
         <input type="submit" value="Sign Up" style="margin: 0 auto; display: block; background-color: #4BC5B8" onclick="showAlert()">
         <h5>Already have an account? </h5> <a href="loginform.php" style="margin: 0 auto; display: block; font-weight: bold; font-size: 13px" >Click Here</a>

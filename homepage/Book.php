@@ -287,7 +287,7 @@ if (!isset($_SESSION['username'])) {
    ?>
 
    <!-- footer section start -->
-   <div class="footer_section layout_padding">
+   <!-- <div class="footer_section layout_padding">
       <div class="container">
          <div class="row">
             <div class="col-lg-3 col-sm-6">
@@ -318,14 +318,14 @@ if (!isset($_SESSION['username'])) {
             </div>
          </div>
       </div>
-   </div>
+   </div> -->
    <!-- footer section end -->
    <!-- copyright section start -->
-   <div class="copyright_section">
+   <!-- <div class="copyright_section">
       <div class="container">
          <p class="copyright_text">2023 All Rights Reserved. Design by <a href="https://html.design">Alan Brandon Steffan</a></p>
       </div>
-   </div>
+   </div> -->
    <!-- Javascript files-->
    <script src="js/jquery.min.js"></script>
    <script src="js/popper.min.js"></script>

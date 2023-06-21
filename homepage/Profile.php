@@ -43,7 +43,7 @@
                      <a class="nav-link" href="index.php">Home</a>
                   </li>
                   <li class="nav-item active">
-                     <a class="nav-link" href="Profile.php">Profile</a>
+                     <a class="nav-link" href="Profile.php">About Us</a>
                   </li>
                   <li class="nav-item">
                      <a class="nav-link" href="Speciality.php">Speciality</a>
