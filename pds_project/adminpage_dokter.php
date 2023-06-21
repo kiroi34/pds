@@ -27,6 +27,19 @@
       grid-template-columns: repeat(2, 1fr);
       grid-gap: 10px;
     }
+
+
+    /* Center the input */
+    .center-input {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    .center-input input {
+      width: 300px;
+      text-align: center;
+    }
   </style>
 
 </head>
@@ -84,7 +97,7 @@
     <nav>
       <div class="sidebar-button">
         <i class='bx bx-menu sidebarBtn'></i>
-        <span class="dashboard">Dokter </span>
+        <span class="dashboard">Doctor</span>
       </div>
     </nav>
 
@@ -175,7 +188,14 @@
       <br>
       <br>
 
-      <input style="float:right;width:300px" type="text" id="searchInput" placeholder="Search" onkeyup="filterArticles()">
+      <center>
+      <div style="position: relative; display: inline-block;">
+  <input style="width: 400px; margin-bottom: 20px; padding-right: 30px;" type="text" id="searchInput" placeholder="Find a doctor.." onkeyup="filterArticles()">
+  <span style="position: absolute; top: 45%; right: 10px; transform: translateY(-50%);">
+    <i class="fas fa-search" style="font-size: 20px;"></i>
+  </span>
+</div>
+      </center>
       <section class="articles">
 
         <?php

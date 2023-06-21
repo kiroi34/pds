@@ -184,7 +184,7 @@ include 'connect.php'
     <nav>
       <div class="sidebar-button">
         <i class='bx bx-menu sidebarBtn'></i>
-        <span class="dashboard">Data Booking Pasien</span>
+        <span class="dashboard">Patient Booking Data</span>
       </div>
     </nav>
 

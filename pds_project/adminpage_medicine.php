@@ -190,7 +190,7 @@ require_once "connect.php";
       <div class="overview-boxes">
         <div class="isi">
           <div class="right-side">
-            <h2>List Obat</h2>
+            <h2>Medicine List</h2>
           <div class="table-responsive">
           <div style="overflow-x: auto;">
             <table id="example" class="table table-striped" style="width:100%; text-align: center;">

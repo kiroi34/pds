@@ -162,7 +162,7 @@
     <nav>
       <div class="sidebar-button">
         <i class='bx bx-menu sidebarBtn'></i>
-        <span class="dashboard">Data Tansaksi</span>
+        <span class="dashboard">Transaction Data</span>
       </div>
     </nav>
 
@@ -170,7 +170,7 @@
       <div class="overview-boxes">
         <div class="isi">
           <div class="right-side">
-            <h2>List Transaksi</h2>
+            <h2>Transaction List</h2>
             <table id="example" class="table table-striped" style="width:100%; text-align: center;">
                 <thead>
                     <tr>

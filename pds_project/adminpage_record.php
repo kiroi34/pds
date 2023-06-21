@@ -102,7 +102,7 @@
       <li>
         <a href="adminpage_dokter.php" >
           <i class='bx bxs-user-detail'></i>
-          <span class="links_name" style="color: #F2E3DB; font-size:18px">Dokter</span>
+          <span class="links_name" style="color: #F2E3DB; font-size:18px">Doctor</span>
         </a>
       </li>
       <li>
@@ -136,7 +136,7 @@
     <nav>
       <div class="sidebar-button">
         <i class='bx bx-menu sidebarBtn'></i>
-        <span class="dashboard">Record Pasien</span>
+        <span class="dashboard">Patient Records</span>
       </div>
     </nav>
 

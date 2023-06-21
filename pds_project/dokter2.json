@@ -14,7 +14,8 @@
             "address": "639 McKibben Street, Tioga, Washington, 6565"
         },
         "hari": ["0", "1", "4", "6"],
-        "jadwal": ["08:00", "18:00"]
+        "jadwal": ["08:00", "18:00"],
+        "availability": "1"
     },
     {
         "_id": "6489c5c048cea6b4b3937fad",
@@ -32,7 +33,8 @@
             "address": "853 Oriental Boulevard, Laurelton, Hawaii, 2160"
         },
         "hari": ["3", "4", "5"],
-        "jadwal": ["08:00", "18:00"]
+        "jadwal": ["08:00", "18:00"],
+        "availability": "1"
     },
     {
         "_id": "6489c5c0caf1622a4ea20760",
@@ -50,7 +52,8 @@
             "address": "496 Oceanview Avenue, Stonybrook, Marshall Islands, 8922"
         },
         "hari": ["0", "1", "4", "6"],
-        "jadwal": ["09:00", "17:00"]
+        "jadwal": ["09:00", "17:00"],
+        "availability": "1"
     },
     {
         "_id": "6489c5c0e4c34cf12814d695",
@@ -68,7 +71,8 @@
             "address": "933 Sutter Avenue, Ryderwood, New Hampshire, 6511"
         },
         "hari": ["1", "2", "3", "5"],
-        "jadwal": ["08:00", "18:00"]
+        "jadwal": ["08:00", "18:00"],
+        "availability": "1"
     },
     {
         "_id": "6489c5c0460be9baec19ce4f",
@@ -86,7 +90,8 @@
             "address": "749 Burnett Street, Thermal, New Mexico, 9046"
         },
         "hari": ["0", "1", "2", "3", "4", "5"],
-        "jadwal": ["10:00", "21:00"]
+        "jadwal": ["10:00", "21:00"],
+        "availability": "0"
     },
     {
         "_id": "6489c5c0fadb2dc166c55aa6",
@@ -104,7 +109,8 @@
             "address": "476 Irving Avenue, Rossmore, Virginia, 3335"
         },
         "hari": ["0", "1", "2", "3", "4", "5", "6"],
-        "jadwal": ["11:00", "16:00"]
+        "jadwal": ["11:00", "16:00"],
+        "availability": "1"
     },
     {
         "_id": "6489c5c00df944bf1225d21c",
@@ -122,7 +128,8 @@
             "address": "915 Ridge Boulevard, Crucible, Maryland, 6470"
         },
         "hari": ["4", "5", "6"],
-        "jadwal": ["12:00", "16:00"]
+        "jadwal": ["12:00", "16:00"],
+        "availability": "1"
     },
     {
         "_id": "6489c5c0e979e30b6cceae86",
@@ -140,7 +147,8 @@
             "address": "672 Vine Street, Gibsonia, North Carolina, 3746"
         },
         "hari": ["0", "2", "4"],
-        "jadwal": ["10:00", "21:00"]
+        "jadwal": ["10:00", "21:00"],
+        "availability": "1"
     },
     {
         "_id": "6489c5c0b94af6325d7af11a",
@@ -158,7 +166,8 @@
             "address": "857 Krier Place, Belleview, New Jersey, 2793"
         },
         "hari": ["1", "3", "5"],
-        "jadwal": ["16.00", "20:00"]
+        "jadwal": ["16.00", "20:00"],
+        "availability": "1"
     },
     {
         "_id": "6489c5c0e722865200d6b23b",
@@ -176,6 +185,7 @@
             "address": "734 Kermit Place, Dola, Florida, 119"
         },
         "hari": ["0", "1", "2", "3", "4", "5", "6"],
-        "jadwal": ["11:00", "18:00"]
+        "jadwal": ["11:00", "18:00"],
+        "availability": "0"
     }
 ]

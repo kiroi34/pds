@@ -8,6 +8,7 @@ if (!isset($_SESSION['username'])) {
    exit();
 }
 ?>
+
 <head>
    <!-- basic -->
    <meta charset="utf-8">
@@ -75,7 +76,7 @@ if (!isset($_SESSION['username'])) {
 <body>
    <!-- header section start -->
    <div class="header_section">
-   <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
          <div class="logo"><a href="index.html"><img src="images/logo.png"></a></div>
          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -95,16 +96,16 @@ if (!isset($_SESSION['username'])) {
                   <a class="nav-link" href="Book.php">Book</a>
                </li>
                <li class="nav-item">
-                  <a class="nav-link" ></a>
+                  <a class="nav-link"></a>
                </li>
                <li class="nav-item">
-                  <a class="nav-link" ></a>
+                  <a class="nav-link"></a>
                </li>
                <li class="nav-item">
-                  <a class="nav-link" ></a>
+                  <a class="nav-link"></a>
                </li>
                <li class="nav-item">
-                  <a class="nav-link" ></a>
+                  <a class="nav-link"></a>
                </li>
                <li class="nav-item">
                   <a class="nav-link" href="../pds_project/profile.php">My Profile</a>
@@ -136,6 +137,7 @@ if (!isset($_SESSION['username'])) {
    $jadwal = [];
    $hari = [];
    $foto = [];
+   $available = [];
 
    // Masukkan ke array spesialis
    foreach ($cursor as $document) {
@@ -153,6 +155,8 @@ if (!isset($_SESSION['username'])) {
       array_push($foto, $document->foto);
       // id_dokter
       array_push($id_dokter, $document->id_dokter);
+      // availability
+      array_push($available, $document->availability);
    }
 
    $q = 0;
@@ -227,14 +231,31 @@ if (!isset($_SESSION['username'])) {
             // button
             $modalId = "exampleModal" . $temp[$k];
             echo "<div class='col-lg-6'>";
-            // Kalau hari ini kerja
-            if (in_array($currentDayOfWeek, $tempHari)) {
-               echo "<button type='button' class='btn btn-primary btn-lg jadwal' data-bs-toggle='modal' data-bs-target='#$modalId' style='margin-top:15px'>" . $jadual . "</button>";
-            }
-            // Kalau gak kerja
-            else {
+            $tempavailable = $available[$temp[$k]]; // ambil availability
+            $akhirshift = substr($jadual,8);
+            // jam sekarang
+            $jamSekarang = time();
+            $targetTime = strtotime($akhirshift);
+
+            // Kalau hari ini available
+            if ($tempavailable == 1) {
+               // Kalau hari ini kerja
+               if (in_array($currentDayOfWeek, $tempHari)) {
+                  // Kalau belum lewat jamnya
+                  if ($jamSekarang < $targetTime) {
+                     echo "<button type='button' class='btn btn-primary btn-lg jadwal' data-bs-toggle='modal' data-bs-toggle='tooltip' data-bs-title='Book an appointment now' data-bs-placement='bottom' data-bs-target='#$modalId' style='margin-top:15px'>" . $jadual . "</button>";
+                 } else { // Kalau sudah lewat jamnya
+                  echo "<button type='button' class='btn btn-secondary btn-lg' data-bs-toggle='tooltip' data-bs-placement='bottom' data-bs-title='No longer available for today' style='margin-top:15px'>" . $jadual . "</button>";
+                 }
+               }
+               // Kalau gak kerja
+               else {
+                  echo "<button type='button' class='btn btn-secondary btn-lg' data-bs-toggle='tooltip' data-bs-placement='bottom' data-bs-title='Unavailable today' style='margin-top:15px'>" . $jadual . "</button>";
+               }
+            } else { // Kalau hari ini ga available
                echo "<button type='button' class='btn btn-secondary btn-lg' data-bs-toggle='tooltip' data-bs-placement='bottom' data-bs-title='Unavailable today' style='margin-top:15px'>" . $jadual . "</button>";
             }
+
             echo "</div>";
             // modal content
             echo "<div class='modal fade' id='$modalId' tabindex='-1' role='dialog' aria-labelledby='exampleModalLabel' aria-hidden='true'>";
@@ -248,11 +269,11 @@ if (!isset($_SESSION['username'])) {
             echo "<div class='modal-body'>";
             echo "<h2>" . $nama_dokter[$temp[$k]] . "</h2>";
             echo "<h5>Specializes in: " . $nama_spesialis . "</h5>";
-            echo "<br><h6>In-clinic hours : " . $jadual. "</h6>";
+            echo "<br><h6>In-clinic hours : " . $jadual . "</h6>";
             echo "</div>";
             echo "<div class='modal-footer'>";
             echo "<button type='button' class='btn btn-danger' data-bs-dismiss='modal'>Cancel</button>";
-            echo "<a class='btn btn-primary' href='../pds_project/process_book.php?dokter=" . $nama_dokter[$temp[$k]] . "&spesialis=". $nama_spesialis ."&iddokter=".$id_dokter[$temp[$k]]."&time=".$jadual."'>Confirm</a>";
+            echo "<a class='btn btn-primary' href='../pds_project/process_book.php?dokter=" . $nama_dokter[$temp[$k]] . "&spesialis=" . $nama_spesialis . "&iddokter=" . $id_dokter[$temp[$k]] . "&time=" . $jadual . "'>Confirm</a>";
             echo "</div>";
             echo "</div>";
             echo "</div>";
@@ -285,7 +306,7 @@ if (!isset($_SESSION['username'])) {
                <div class="Useful_text">There are many variations of passages of Lorem Ipsum available, but the majority have suffered ,</div>
             </div>
             <div class="col-lg-3 col-sm-6">
-               
+
                <div class="social_icon">
                   <ul>
                      <li><a href="#"><img src="images/fb-icon.png"></a></li>
@@ -319,7 +340,7 @@ if (!isset($_SESSION['username'])) {
    <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
    <script>
       // Initialize tooltips
-      $(function () {
+      $(function() {
          $('[data-bs-toggle="tooltip"]').tooltip();
       });
    </script>
