@@ -67,10 +67,10 @@ session_start();
                     }
                     // Kalo belum ada antrian di dokter itu
                     else {
-                        $latest_queue3 = 1;
+                        $latest_queue = 1;
                     }
                     // Masukkan antrian dan data
-                    $sql2 = "INSERT INTO bookings (id_dokter, id_pasien, nomor_antrian) VALUES ('$id_dokter', '$id_pasien', '$latest_queue3')";
+                    $sql2 = "INSERT INTO bookings (id_dokter, id_pasien, nomor_antrian) VALUES ('$id_dokter', '$id_pasien', '$latest_queue')";
                     if ($conn->query($sql2) === TRUE) {
                         echo "<h3 style='text-align: center'; color:white>Your Queue Number: " . $latest_queue . "</31>";
                     } else {

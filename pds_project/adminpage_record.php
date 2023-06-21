@@ -255,6 +255,7 @@ $timestmt->execute();
                     <th>Action</th>
                     <th>Record Date</th>
                     <th>Delete</th>
+                    <th>Update</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -303,7 +304,11 @@ $timestmt->execute();
                     echo "<td>" . $tindakan . "</td>";
                     echo "<td>" . $tanggalrm . "</td>";
                     echo "<td id='btnn".$idrecord."'><a type='button' class='btn btn-danger' href='delete_record.php?id=".$idrecord."'>Delete</a></td>";
-
+                    
+                    echo "<form action='adminpage_edit_record.php' method='post'>";
+                    echo "<input type='hidden' name='dapetinID' value=".$idrecord.">";
+                    echo"<td><button type='submit'  value='update' name='update' class='btn btn-warning stlye'>Update</button></td>";
+                   echo "</form>";
                     echo "</tr>";
 
                     // Increment count

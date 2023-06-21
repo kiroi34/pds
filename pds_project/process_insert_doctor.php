@@ -80,7 +80,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         'registered' => $registered,
         'spesialis' => $specialization,
         'biodata' => [
-            'nama' => $nama,
+            'name' => $nama,
             'gender' => $gender,
             'DOB' => $dob,
             'email' => $email,
