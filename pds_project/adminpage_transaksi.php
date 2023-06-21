@@ -175,14 +175,14 @@
                 <thead>
                     <tr>
                         <th>Count</th>
-                        <th>ID Transaksi</th>
-                        <th>Date Transaksi</th>
-                        <th>ID Pasien</th>
-                        <th>ID Dokter</th>
-                        <th>Nama Obat</th>
-                        <th>Jumlah Obat</th>
-                        <th>Harga Dokter</th>
-                        <th>Total Harga </th>
+                        <th>Transaction ID</th>
+                        <th>Date Transaction</th>
+                        <th>Patient ID</th>
+                        <th>Doctor ID</th>
+                        <th>Medicine Name</th>
+                        <th>Quantity</th>
+                        <th>Doctor Fee</th>
+                        <th>Total Price </th>
                         <th>Status</th>
                    
 

@@ -245,16 +245,16 @@ $timestmt->execute();
               <table id="example" class="table table-striped" style="width:100%; text-align: center;">
                 <thead>
                   <tr>
-                    <th>Nomor</th>
-                    <th>ID Record</th>
-                    <th>ID Dokter</th>
-                    <th>ID Pasien</th>
-                    <th>Riwayat Obat</th>
-                    <th>Gejala</th>
-                    <th>Diagnosa</th>
-                    <th>tindakan</th>
-                    <th>Tanggal Rekam Medis</th>
+                    <th>Number</th>
+                    <th>Record ID </th>
+                    <th>Doctor ID </th>
+                    <th>Patient ID</th>
+                    <th>Medicine History</th>
+                    <th>Symptoms</th>
+                    <th>Diagnosis</th>
                     <th>Action</th>
+                    <th>Record Date</th>
+                    <th>Delete</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -302,7 +302,7 @@ $timestmt->execute();
                     echo "<td>" . $diagnosa . "</td>";
                     echo "<td>" . $tindakan . "</td>";
                     echo "<td>" . $tanggalrm . "</td>";
-                    echo "<td id='btnn".$idrecord."'><a type='button' class='btn btn-danger' href='delete_record.php?id=".$idrecord."'>Hapus</a></td>";
+                    echo "<td id='btnn".$idrecord."'><a type='button' class='btn btn-danger' href='delete_record.php?id=".$idrecord."'>Delete</a></td>";
 
                     echo "</tr>";
 
