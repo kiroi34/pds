@@ -127,7 +127,7 @@
       <li>
         <a href="adminpage_dokter.php" >
           <i class='bx bxs-user-detail'></i>
-          <span class="links_name" style="color: #F2E3DB; font-size:18px">Dokter</span>
+          <span class="links_name" style="color: #F2E3DB; font-size:18px">Doctor</span>
         </a>
       </li>
       <li>

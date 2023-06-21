@@ -201,6 +201,8 @@ require_once "connect.php";
                         <th>Medicine Type</th>
                         <th>Medicine Price</th>
                         <th>Stock Medicine</th>
+                        <th>Delete</th>
+                        <th>Update</th>
                     </tr>
                 </thead> 
                 <tbody>
@@ -220,7 +222,11 @@ require_once "connect.php";
                     <td><?php echo $data['price_medicine']; ?></td>
                     <td><?php echo $data['stock_medicine']; ?></td>
                     <td id="btnn<?php echo $data['id_medicine'];?>"><button type="button" class="btn btn-danger" onclick="hapus(<?php echo $data['id_medicine']; ?>)">Hapus</button></td>
-                    </tr>
+                    <form action="adminpage_edit_medicine.php" method="post">
+                      <input type="hidden" name="dapetinID" value="<?php echo $data['id_medicine'];?>">
+                      <td><button type="submit"  value="update" name="update" class="btn btn-warning stlye">Update</button></td>
+                     </form>
+                  </tr>
                 <?php
                       }
                 ?>

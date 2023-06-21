@@ -46,7 +46,7 @@
       <li>
         <a href="adminpage_dokter.php" class="active">
           <i class='bx bx-home-alt'></i>
-          <span class="links_name" style="color: #F2E3DB; font-size:18px">Update Dokter</span>
+          <span class="links_name" style="color: #F2E3DB; font-size:18px">Update Doctor</span>
         </a>
       </li>
       <li>
@@ -59,6 +59,18 @@
         <a href="adminpage_transaksi.php">
           <i class='bx bx-home-alt'></i>
           <span class="links_name" style="color: #F2E3DB; font-size:18px">Transaksi</span>
+        </a>
+      </li>
+      <li>
+        <a href="adminpage_medicine.php">
+          <i class='bx bx-capsule'></i>
+          <span class="links_name" style="color: #F2E3DB; font-size:18px">Medicine</span>
+        </a>
+      </li>
+      <li>
+        <a href="adminpage_kasir.php" >
+          <i class='bx bx-credit-card'></i>
+          <span class="links_name" style="color: #F2E3DB; font-size:18px">Cashier</span>
         </a>
       </li>
     </ul>
