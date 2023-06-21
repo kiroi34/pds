@@ -29,21 +29,27 @@ $latest_id_num = intval(substr($latest_id, 1)) + 1;
 
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    
+
     $idDokter = $_POST['idDoc'];
     $idPasien = $_POST['idPatient'];
-    $riwayatObat = explode(", ", $_POST['riwayatobat']); // Memisahkan obat-obat yang diinputkan
-    $gejala= $_POST['gejala'];
+    $riwayatObat = $_POST['riwayatobat']; // Memisahkan obat-obat yang diinputkan
+    $gejala = $_POST['gejala'];
     $diagnosa = $_POST['diagnosa'];
     $tindakan = $_POST['tindakan'];
     $tanggalperiksa = $_POST['tanggal'];
     $id_record = "r" . "$latest_id_num";
+
+    $riwayatobatfix = [];
+    foreach ($riwayatObat as $riwayatObatValue) {
+        array_push($riwayatobatfix,$riwayatObatValue);
+    }
+
     // Create document
     $document = [
         'id_record' => $id_record,
         'id_dokter' => $idDokter,
         'id_pasien' => $idPasien,
-        'riwayatObat' => $riwayatObat,
+        'riwayat_obat' => $riwayatobatfix,
         'gejala_pasien' => $gejala,
         'diagnosa_pasien' => $diagnosa,
         'tindakan_dilakukan' => $tindakan,
