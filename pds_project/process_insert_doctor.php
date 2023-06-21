@@ -58,6 +58,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $list_hari = [];
     $selectedOptions = $_POST['days'] ?? [];
 
+    // availability
+    $availability = $_POST['availability'];
+
     // Loop through selected checkboxes
     foreach ($selectedOptions as $option) {
         array_push($list_hari, $option);
@@ -85,7 +88,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             'address' => $address
         ],
         'hari' => $list_hari,
-        'jadwal' => $work_hours
+        'jadwal' => $work_hours,
+        'availability' => $availability
     ];
 
     // Specify the collection

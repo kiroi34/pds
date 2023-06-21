@@ -175,8 +175,15 @@
             <label for='start_time'>Start : </label>
             <input type="time" id="start_time" name="start_time" required>
             <label for='end_time'>End : </label>
-            <input type="time" id="end_time" name="end_time" required>
+            <input type="time" id="end_time" name="end_time" required><br>
 
+            <!-- Availability -->
+            <label>Availability</label><br>
+            <input type="radio" id="available" name="availability" value="1">
+            <label for="available">Available today</label>
+            <input type="radio" id="unavailable" name="availability" value="0">
+            <label for="unavailable">Not available today</label><br>
+            <br>
 
             <br>
             <br>
@@ -244,6 +251,7 @@
           $biodata = $document->biodata;
           $hari = $document->hari;
           $jadwal = $document->jadwal;
+          $availability = $document->availability;
         ?>
 
           <article>
@@ -290,6 +298,14 @@
                   $countt++;
                 }
                 echo "</div>";
+                echo "<br>";
+                if($availability == "1"){
+                  echo "<h4>Availability today : <span style='color:green'>available<span></h4>";
+                }
+                elseif($availability == "0"){
+                  echo "<h4>Availability today : <span style='color:red'>unavailable<span></h4>";
+                }
+                
                 echo "<br>";
 
                 ?>

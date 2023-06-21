@@ -19,6 +19,7 @@ if (isset($_POST['submit'])) {
     $arrayjam = [];
     array_push($arrayjam, $starttime);
     array_push($arrayjam, $endtime);
+    $availability = $_POST['availability'];
 
     $manager = new MongoDB\Driver\Manager($connectionString);
 
@@ -35,7 +36,8 @@ if (isset($_POST['submit'])) {
             'biodata.address' => $alamat,
             'biodata.phone' => $phone,
             'hari' => $days,
-            'jadwal' => $arrayjam
+            'jadwal' => $arrayjam,
+            'availability' => $availability
         ]
     ];
     $options = ['multi' => false, 'upsert' => false];

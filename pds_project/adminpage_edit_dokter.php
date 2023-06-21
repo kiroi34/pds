@@ -177,6 +177,7 @@
             <input type="checkbox" id="day6" name="days[]" value="6">
             <label for="saturday">Saturday</label><br>
 
+            <br>
             <!-- Jam -->
             <h5>Available hours</h5>
             <label for='start_time'>Start : </label>
@@ -184,6 +185,19 @@
             <label for='end_time'>End : </label>
             <input type="time" id="end_time" name="end_time" value='<?php echo $jadwalcontainer[1] ?>' required>
 
+            <br>
+            <br>
+            <!-- Availability -->
+            <h5>Availability</h5>
+            <input type="radio" id="available" name="availability" value="1" <?php if ($document->availability == "1") {
+                                                                        echo " checked='checked'";
+                                                                      } ?>>
+            <label for="available">Available today</label>
+            <input type="radio" id="unavailable" name="availability" value="0" <?php if ($document->availability == "0") {
+                                                                            echo " checked='checked'";
+                                                                          } ?>>
+            <label for="female">Not available for today</label><br>
+            <br>
 
             <br>
             <br>
@@ -200,7 +214,6 @@
       foreach ($hari as $value) {
         echo "<script> document.getElementById('day" . $value . "').checked = true;</script>";
       }
-
     }
     ?>
   </section>
