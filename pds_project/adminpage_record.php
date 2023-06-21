@@ -152,8 +152,8 @@ $timestmt->execute();
         </div>
       </div>
 
-      <div class="home-content">
-        <div class="isi" id="divInput" style="display:none">
+      <div class="home-content" >
+        <div class="isi" id="divInput" style="display:none" >
           <form action="process_insert_record.php" method="post" onsubmit="return validateForm()" name="myForm" enctype="multipart/form-data">
             <i class="fas fa-times" onclick="closeInput()" style="font-size:20px;color:red; float: right;"></i>
 
